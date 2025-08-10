@@ -283,6 +283,17 @@
               <input type="hidden" name="subject" value="[PillSnap 피드백] 새로운 의견이 도착했습니다">
               <input type="hidden" name="from_name" value="PillSnap 웹사이트">
               <input type="hidden" name="redirect" value="https://www.pillsnap.co.kr?success=true">
+              <!-- 한글 라벨들 -->
+              <input type="hidden" name="이름" value="" id="korean-name">
+              <input type="hidden" name="이메일" value="" id="korean-email">
+              <input type="hidden" name="사용자_유형" value="" id="korean-usertype">
+              <input type="hidden" name="관심_기능" value="" id="korean-interest">
+              <input type="hidden" name="기타_관심사항" value="" id="korean-interest-other">
+              <input type="hidden" name="제안사항" value="" id="korean-suggestions">
+              <input type="hidden" name="기타_제안사항" value="" id="korean-suggestions-other">
+              <input type="hidden" name="우려사항" value="" id="korean-concerns">
+              <input type="hidden" name="기타_우려사항" value="" id="korean-concerns-other">
+              <input type="hidden" name="뉴스레터_구독" value="" id="korean-newsletter">
               <div class="grid md:grid-cols-2 gap-6">
                 <div>
                   <label for="user_name" class="block text-sm font-medium text-gray-700 mb-2">
@@ -309,12 +320,12 @@
                 <select id="userType" name="userType" required
                   class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all">
                   <option value="">선택해주세요</option>
-                  <option value="patient">환자/일반인</option>
-                  <option value="caregiver">환자 가족/보호자</option>
-                  <option value="pharmacist">약사</option>
-                  <option value="doctor">의사</option>
-                  <option value="nurse">간호사</option>
-                  <option value="other">기타</option>
+                  <option value="환자/일반인">환자/일반인</option>
+                  <option value="환자 가족/보호자">환자 가족/보호자</option>
+                  <option value="약사">약사</option>
+                  <option value="의사">의사</option>
+                  <option value="간호사">간호사</option>
+                  <option value="기타">기타</option>
                 </select>
               </div>
 
@@ -324,27 +335,27 @@
                 </label>
                 <div class="grid md:grid-cols-2 gap-4">
                   <label class="flex items-center space-x-3 cursor-pointer">
-                    <input type="radio" name="interest" value="identification" required class="text-purple-500">
+                    <input type="radio" name="interest" value="약품 촬영 및 식별" required class="text-purple-500">
                     <span>약품 촬영 및 식별</span>
                   </label>
                   <label class="flex items-center space-x-3 cursor-pointer">
-                    <input type="radio" name="interest" value="information" required class="text-purple-500">
+                    <input type="radio" name="interest" value="상세한 약품 정보" required class="text-purple-500">
                     <span>상세한 약품 정보</span>
                   </label>
                   <label class="flex items-center space-x-3 cursor-pointer">
-                    <input type="radio" name="interest" value="interaction" required class="text-purple-500">
+                    <input type="radio" name="interest" value="약물 상호작용 체크" required class="text-purple-500">
                     <span>약물 상호작용 체크</span>
                   </label>
                   <label class="flex items-center space-x-3 cursor-pointer">
-                    <input type="radio" name="interest" value="reminder" required class="text-purple-500">
+                    <input type="radio" name="interest" value="복용 알림 기능" required class="text-purple-500">
                     <span>복용 알림 기능</span>
                   </label>
                   <label class="flex items-center space-x-3 cursor-pointer">
-                    <input type="radio" name="interest" value="record" required class="text-purple-500">
+                    <input type="radio" name="interest" value="복용 기록 관리" required class="text-purple-500">
                     <span>복용 기록 관리</span>
                   </label>
                   <label class="flex items-center space-x-3 cursor-pointer">
-                    <input type="radio" name="interest" value="other" required class="text-purple-500" onchange="toggleOtherInput('interest-other', this)">
+                    <input type="radio" name="interest" value="기타" required class="text-purple-500" onchange="toggleOtherInput('interest-other', this)">
                     <span>기타</span>
                   </label>
                 </div>
@@ -361,39 +372,39 @@
                 </label>
                 <div class="grid md:grid-cols-2 gap-3">
                   <label class="flex items-center space-x-3 cursor-pointer">
-                    <input type="checkbox" name="suggestions" value="drug-interaction" class="text-purple-500 focus:ring-purple-500">
+                    <input type="checkbox" name="suggestions" value="약물 상호작용 체크" class="text-purple-500 focus:ring-purple-500">
                     <span>약물 상호작용 체크</span>
                   </label>
                   <label class="flex items-center space-x-3 cursor-pointer">
-                    <input type="checkbox" name="suggestions" value="reminder" class="text-purple-500 focus:ring-purple-500">
+                    <input type="checkbox" name="suggestions" value="복용 알림 기능" class="text-purple-500 focus:ring-purple-500">
                     <span>복용 알림 기능</span>
                   </label>
                   <label class="flex items-center space-x-3 cursor-pointer">
-                    <input type="checkbox" name="suggestions" value="storage-guide" class="text-purple-500 focus:ring-purple-500">
+                    <input type="checkbox" name="suggestions" value="약품 보관법 안내" class="text-purple-500 focus:ring-purple-500">
                     <span>약품 보관법 안내</span>
                   </label>
                   <label class="flex items-center space-x-3 cursor-pointer">
-                    <input type="checkbox" name="suggestions" value="side-effects" class="text-purple-500 focus:ring-purple-500">
+                    <input type="checkbox" name="suggestions" value="부작용 정보 제공" class="text-purple-500 focus:ring-purple-500">
                     <span>부작용 정보 제공</span>
                   </label>
                   <label class="flex items-center space-x-3 cursor-pointer">
-                    <input type="checkbox" name="suggestions" value="search-function" class="text-purple-500 focus:ring-purple-500">
+                    <input type="checkbox" name="suggestions" value="약품명 검색 기능" class="text-purple-500 focus:ring-purple-500">
                     <span>약품명 검색 기능</span>
                   </label>
                   <label class="flex items-center space-x-3 cursor-pointer">
-                    <input type="checkbox" name="suggestions" value="usage-record" class="text-purple-500 focus:ring-purple-500">
+                    <input type="checkbox" name="suggestions" value="복용 기록 관리" class="text-purple-500 focus:ring-purple-500">
                     <span>복용 기록 관리</span>
                   </label>
                   <label class="flex items-center space-x-3 cursor-pointer">
-                    <input type="checkbox" name="suggestions" value="pharmacy-finder" class="text-purple-500 focus:ring-purple-500">
+                    <input type="checkbox" name="suggestions" value="주변 약국 찾기" class="text-purple-500 focus:ring-purple-500">
                     <span>주변 약국 찾기</span>
                   </label>
                   <label class="flex items-center space-x-3 cursor-pointer">
-                    <input type="checkbox" name="suggestions" value="dosage-calculator" class="text-purple-500 focus:ring-purple-500">
+                    <input type="checkbox" name="suggestions" value="복용량 계산기" class="text-purple-500 focus:ring-purple-500">
                     <span>복용량 계산기</span>
                   </label>
                   <label class="flex items-center space-x-3 cursor-pointer">
-                    <input type="checkbox" name="suggestions" value="other" class="text-purple-500 focus:ring-purple-500" onchange="toggleOtherInput('suggestions-other', this)">
+                    <input type="checkbox" name="suggestions" value="기타" class="text-purple-500 focus:ring-purple-500" onchange="toggleOtherInput('suggestions-other', this)">
                     <span>기타</span>
                   </label>
                 </div>
@@ -410,39 +421,39 @@
                 </label>
                 <div class="grid md:grid-cols-2 gap-3">
                   <label class="flex items-center space-x-3 cursor-pointer">
-                    <input type="checkbox" name="concerns" value="accuracy" class="text-purple-500 focus:ring-purple-500">
+                    <input type="checkbox" name="concerns" value="정보의 정확성" class="text-purple-500 focus:ring-purple-500">
                     <span>정보의 정확성</span>
                   </label>
                   <label class="flex items-center space-x-3 cursor-pointer">
-                    <input type="checkbox" name="concerns" value="privacy" class="text-purple-500 focus:ring-purple-500">
+                    <input type="checkbox" name="concerns" value="개인정보 보안" class="text-purple-500 focus:ring-purple-500">
                     <span>개인정보 보안</span>
                   </label>
                   <label class="flex items-center space-x-3 cursor-pointer">
-                    <input type="checkbox" name="concerns" value="misrecognition" class="text-purple-500 focus:ring-purple-500">
+                    <input type="checkbox" name="concerns" value="약품 오인식 가능성" class="text-purple-500 focus:ring-purple-500">
                     <span>약품 오인식 가능성</span>
                   </label>
                   <label class="flex items-center space-x-3 cursor-pointer">
-                    <input type="checkbox" name="concerns" value="usability" class="text-purple-500 focus:ring-purple-500">
+                    <input type="checkbox" name="concerns" value="사용 편의성" class="text-purple-500 focus:ring-purple-500">
                     <span>사용 편의성</span>
                   </label>
                   <label class="flex items-center space-x-3 cursor-pointer">
-                    <input type="checkbox" name="concerns" value="internet-required" class="text-purple-500 focus:ring-purple-500">
+                    <input type="checkbox" name="concerns" value="인터넷 연결 필요" class="text-purple-500 focus:ring-purple-500">
                     <span>인터넷 연결 필요</span>
                   </label>
                   <label class="flex items-center space-x-3 cursor-pointer">
-                    <input type="checkbox" name="concerns" value="battery-drain" class="text-purple-500 focus:ring-purple-500">
+                    <input type="checkbox" name="concerns" value="배터리 소모" class="text-purple-500 focus:ring-purple-500">
                     <span>배터리 소모</span>
                   </label>
                   <label class="flex items-center space-x-3 cursor-pointer">
-                    <input type="checkbox" name="concerns" value="data-usage" class="text-purple-500 focus:ring-purple-500">
+                    <input type="checkbox" name="concerns" value="데이터 사용량" class="text-purple-500 focus:ring-purple-500">
                     <span>데이터 사용량</span>
                   </label>
                   <label class="flex items-center space-x-3 cursor-pointer">
-                    <input type="checkbox" name="concerns" value="cost" class="text-purple-500 focus:ring-purple-500">
+                    <input type="checkbox" name="concerns" value="이용 비용" class="text-purple-500 focus:ring-purple-500">
                     <span>이용 비용</span>
                   </label>
                   <label class="flex items-center space-x-3 cursor-pointer">
-                    <input type="checkbox" name="concerns" value="other" class="text-purple-500 focus:ring-purple-500" onchange="toggleOtherInput('concerns-other', this)">
+                    <input type="checkbox" name="concerns" value="기타" class="text-purple-500 focus:ring-purple-500" onchange="toggleOtherInput('concerns-other', this)">
                     <span>기타</span>
                   </label>
                 </div>
@@ -561,9 +572,43 @@
         }
       }
 
+      // 체크박스 배열을 한글 문자열로 변환하는 함수
+      function formatCheckboxArray(formData, name) {
+        const values = formData.getAll(name);
+        if (values.length === 0) return '없음';
+        return values.join(', ');
+      }
+
       // 폼 제출 처리
       document.getElementById('feedbackForm').addEventListener('submit', function(e) {
-        // Web3Forms가 자동으로 처리하므로 preventDefault 제거
+        // 한글 필드 자동 채우기
+        const formData = new FormData(this);
+        
+        // 기본 정보
+        document.getElementById('korean-name').value = formData.get('user_name') || '';
+        document.getElementById('korean-email').value = formData.get('user_email') || '';
+        document.getElementById('korean-usertype').value = formData.get('userType') || '';
+        
+        // 관심 기능
+        const interest = formData.get('interest') || '';
+        const interestOther = formData.get('interestOther') || '';
+        document.getElementById('korean-interest').value = interest;
+        document.getElementById('korean-interest-other').value = interestOther;
+        
+        // 제안사항 (복수선택)
+        const suggestions = formatCheckboxArray(formData, 'suggestions');
+        const suggestionsOther = formData.get('suggestionsOther') || '';
+        document.getElementById('korean-suggestions').value = suggestions;
+        document.getElementById('korean-suggestions-other').value = suggestionsOther;
+        
+        // 우려사항 (복수선택)
+        const concerns = formatCheckboxArray(formData, 'concerns');
+        const concernsOther = formData.get('concernsOther') || '';
+        document.getElementById('korean-concerns').value = concerns;
+        document.getElementById('korean-concerns-other').value = concernsOther;
+        
+        // 뉴스레터 구독
+        document.getElementById('korean-newsletter').value = formData.get('newsletter') ? '예' : '아니오';
         
         // 제출 버튼 상태 변경
         const submitBtn = document.querySelector('button[type="submit"]');
