@@ -278,21 +278,25 @@
           </div>
 
           <div class="bg-white rounded-2xl shadow-lg p-8">
-            <form id="feedbackForm" class="space-y-6">
+            <form id="feedbackForm" action="https://api.web3forms.com/submit" method="POST" class="space-y-6">
+              <input type="hidden" name="access_key" value="f6faf7e3-fa62-4ff3-b7d8-1b31df67831b">
+              <input type="hidden" name="subject" value="[PillSnap 피드백] 새로운 의견이 도착했습니다">
+              <input type="hidden" name="from_name" value="PillSnap 웹사이트">
+              <input type="hidden" name="redirect" value="https://www.pillsnap.co.kr?success=true">
               <div class="grid md:grid-cols-2 gap-6">
                 <div>
-                  <label for="name" class="block text-sm font-medium text-gray-700 mb-2">
+                  <label for="user_name" class="block text-sm font-medium text-gray-700 mb-2">
                     이름 <span class="text-red-500">*</span>
                   </label>
-                  <input type="text" id="name" name="name" required
+                  <input type="text" id="user_name" name="user_name" required
                     class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all"
                     placeholder="김민준">
                 </div>
                 <div>
-                  <label for="email" class="block text-sm font-medium text-gray-700 mb-2">
+                  <label for="user_email" class="block text-sm font-medium text-gray-700 mb-2">
                     이메일 <span class="text-red-500">*</span>
                   </label>
-                  <input type="email" id="email" name="email" required
+                  <input type="email" id="user_email" name="user_email" required
                     class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all"
                     placeholder="example@gmail.com">
                 </div>
@@ -557,94 +561,30 @@
         }
       }
 
-      // 체크박스 배열을 문자열로 변환하는 함수
-      function formatCheckboxArray(formData, name) {
-        const values = formData.getAll(name);
-        if (values.length === 0) return '없음';
-        return values.join(', ');
-      }
-
+      // 폼 제출 처리
       document.getElementById('feedbackForm').addEventListener('submit', function(e) {
-        e.preventDefault();
+        // Web3Forms가 자동으로 처리하므로 preventDefault 제거
         
-        const formData = new FormData(this);
-        const data = Object.fromEntries(formData.entries());
-        
-        // 체크박스 배열 처리
-        const suggestions = formatCheckboxArray(formData, 'suggestions');
-        const concerns = formatCheckboxArray(formData, 'concerns');
-        
-        // 관심 기능에 기타 내용 추가
-        let interestText = data.interest;
-        if (data.interest === 'other' && data.interestOther) {
-          interestText += ` (${data.interestOther})`;
-        }
-        
-        // 제안사항에 기타 내용 추가
-        let suggestionsText = suggestions;
-        if (formData.getAll('suggestions').includes('other') && data.suggestionsOther) {
-          suggestionsText += ` / 기타: ${data.suggestionsOther}`;
-        }
-        
-        // 우려사항에 기타 내용 추가
-        let concernsText = concerns;
-        if (formData.getAll('concerns').includes('other') && data.concernsOther) {
-          concernsText += ` / 기타: ${data.concernsOther}`;
-        }
-        
-        // 이메일 제목 생성
-        const subject = `[PillSnap 피드백] ${data.name}님의 소중한 의견`;
-        
-        // 이메일 내용 생성
-        const body = `
-PillSnap 피드백
-
-📋 기본 정보:
-- 이름: ${data.name}
-- 이메일: ${data.email}
-- 사용자 유형: ${data.userType}
-
-🎯 가장 관심있는 기능: ${interestText}
-
-💡 필요한 기능 (복수선택):
-${suggestionsText}
-
-😰 우려사항 (복수선택):
-${concernsText}
-
-📧 뉴스레터 구독: ${data.newsletter ? '예' : '아니오'}
-
----
-PillSnap 웹사이트에서 발송됨
-${new Date().toLocaleString('ko-KR')}
-        `.trim();
-        
-        // mailto 링크 생성
-        const mailtoLink = `mailto:contact@pillsnap.co.kr?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-        
-        // 기본 이메일 클라이언트로 열기
-        window.location.href = mailtoLink;
-        
-        // 성공 메시지 표시
+        // 제출 버튼 상태 변경
         const submitBtn = document.querySelector('button[type="submit"]');
         const originalText = submitBtn.innerHTML;
         
         submitBtn.innerHTML = `
-          <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20">
-            <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+          <svg class="w-5 h-5 mr-2 animate-spin" fill="currentColor" viewBox="0 0 20 20">
+            <path d="M11 17a1 1 0 001.447.894l4-2A1 1 0 0017 15V9.236a1 1 0 00-1.447-.894l-4 2a1 1 0 00-.553.894V17zM15.211 6.276a1 1 0 000-1.788l-4.764-2.382a1 1 0 00-.894 0L4.789 4.488a1 1 0 000 1.788l4.764 2.382a1 1 0 00.894 0l4.764-2.382zM4.447 8.342A1 1 0 003 9.236V15a1 1 0 00.553.894l4 2A1 1 0 009 17v-5.764a1 1 0 00-.553-.894l-4-2z"/>
           </svg>
-          감사합니다! 이메일이 준비되었습니다
+          전송 중...
         `;
         submitBtn.disabled = true;
-        submitBtn.className = submitBtn.className.replace('from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700', 'from-green-500 to-green-600');
-        
-        // 5초 후 원상복구
-        setTimeout(() => {
-          submitBtn.innerHTML = originalText;
-          submitBtn.disabled = false;
-          submitBtn.className = submitBtn.className.replace('from-green-500 to-green-600', 'from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700');
-        }, 5000);
+        submitBtn.className = submitBtn.className.replace('from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700', 'from-gray-500 to-gray-600');
       });
+
+      // 폼 제출 성공 시 처리 (Web3Forms 리다이렉트 후)
+      if (window.location.search.includes('success=true')) {
+        alert('✅ 소중한 의견 감사합니다! 더 나은 PillSnap을 만드는데 활용하겠습니다.');
+        // URL에서 success 파라미터 제거
+        window.history.replaceState({}, document.title, window.location.pathname);
+      }
     </script>
 
     <!-- Smooth Scroll Script -->
