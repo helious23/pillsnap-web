@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PillSnap - AI 약품 식별 앱</title>
+    <meta name="description" content="사진 한 장으로 약품 정보를 확인하세요. AI 기술로 정확한 의약품 정보를 제공합니다." />
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    
+    <!-- Open Graph for 소셜 미디어 공유 -->
+    <meta property="og:title" content="PillSnap - AI 약품 식별 앱" />
+    <meta property="og:description" content="사진 한 장으로 약품 정보를 확인하세요. AI 기술로 정확한 의약품 정보를 제공합니다." />
+    <meta property="og:image" content="https://www.pillsnap.co.kr/og-image.png" />
+    <meta property="og:url" content="https://www.pillsnap.co.kr" />
+    <meta property="og:type" content="website" />
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="PillSnap - AI 약품 식별 앱" />
+    <meta name="twitter:description" content="사진 한 장으로 약품 정보를 확인하세요" />
+    <meta name="twitter:image" content="https://www.pillsnap.co.kr/og-image.png" />
+    
+    <!-- TailwindCSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- 커스텀 폰트 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- 커스텀 스타일 -->
+    <style>
+      body {
+        font-family: 'Noto Sans KR', sans-serif;
+      }
+      .gradient-bg {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      }
+      .feature-card:hover {
+        transform: translateY(-5px);
+        transition: all 0.3s ease;
+      }
+      .download-btn:hover {
+        transform: scale(1.05);
+        transition: all 0.2s ease;
+      }
+      .hero-animation {
+        animation: fadeInUp 1s ease-out;
+      }
+      @keyframes fadeInUp {
+        from {
+          opacity: 0;
+          transform: translateY(30px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+    </style>
+  </head>
+  <body class="bg-white text-gray-800">
+    <!-- 네비게이션 -->
+    <header class="fixed top-0 w-full z-50 bg-white/90 backdrop-blur-sm shadow-sm">
+      <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+        <div class="flex items-center space-x-2">
+          <div class="w-8 h-8 bg-gradient-to-r from-purple-500 to-blue-500 rounded-lg flex items-center justify-center">
+            <span class="text-white font-bold text-lg">💊</span>
+          </div>
+          <span class="text-xl font-bold text-gray-800">PillSnap</span>
+        </div>
+        <div class="hidden md:flex items-center space-x-8">
+          <a href="#features" class="text-gray-600 hover:text-purple-600 transition-colors">기능</a>
+          <a href="#how-it-works" class="text-gray-600 hover:text-purple-600 transition-colors">사용법</a>
+          <a href="#download" class="bg-purple-600 text-white px-6 py-2 rounded-full hover:bg-purple-700 transition-colors">다운로드</a>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <!-- Hero Section -->
+      <section class="pt-24 pb-20 gradient-bg text-white">
+        <div class="container mx-auto px-6 text-center hero-animation">
+          <h1 class="text-4xl md:text-6xl font-bold mb-6 leading-tight">
+            약을 찍으면,<br />
+            <span class="text-yellow-300">AI가 알려드립니다</span>
+          </h1>
+          <p class="text-xl md:text-2xl mb-8 text-purple-100">
+            의약품 정보를 가장 쉽고 빠르게 확인하세요
+          </p>
+          <p class="text-lg mb-12 text-purple-200 max-w-2xl mx-auto">
+            사진 한 장만 찍으면 AI가 약품을 식별하고, 효능·용법·주의사항까지 상세한 정보를 제공합니다.
+          </p>
+          
+          <div id="download" class="flex flex-col sm:flex-row gap-4 justify-center items-center mb-16">
+            <a href="#" class="download-btn inline-flex items-center bg-black text-white px-8 py-4 rounded-xl font-semibold hover:bg-gray-800 transition-all">
+              <svg class="w-6 h-6 mr-3" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M17.523 15.3414c-.5511 0-.9993-.4482-.9993-.9993s.4482-.9993.9993-.9993c.5511 0 .9993.4482.9993.9993s-.4482.9993-.9993.9993zm-11.046 0c-.5511 0-.9993-.4482-.9993-.9993s.4482-.9993.9993-.9993c.5511 0 .9993.4482.9993.9993s-.4482.9993-.9993.9993z"/>
+                <path d="M3 1a1 1 0 000 2h.5l3.048 9.145A2 2 0 008.444 14h8.112a2 2 0 001.896-1.355L21.5 3H5.72l-.5-1.5A1 1 0 004.22 1H3z"/>
+              </svg>
+              Google Play에서 다운로드
+            </a>
+            <div class="download-btn inline-flex items-center bg-gray-400 text-white px-8 py-4 rounded-xl font-semibold opacity-60 cursor-not-allowed">
+              <svg class="w-6 h-6 mr-3" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/>
+              </svg>
+              App Store (출시 예정)
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Features Section -->
+      <section id="features" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-6">
+          <h2 class="text-3xl md:text-4xl font-bold text-center mb-4 text-gray-800">
+            왜 PillSnap인가요?
+          </h2>
+          <p class="text-xl text-center text-gray-600 mb-16 max-w-3xl mx-auto">
+            복잡한 약품 정보 검색은 이제 그만. 간단한 사진 촬영만으로 모든 정보를 확인하세요.
+          </p>
+          
+          <div class="grid md:grid-cols-3 gap-8">
+            <div class="feature-card bg-white p-8 rounded-2xl shadow-lg text-center">
+              <div class="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                <span class="text-3xl">📸</span>
+              </div>
+              <h3 class="text-xl font-semibold mb-4 text-gray-800">간편한 촬영</h3>
+              <p class="text-gray-600 leading-relaxed">
+                스마트폰 카메라로 약품을 촬영하기만 하면 됩니다. 복잡한 입력 과정 없이 간단하게!
+              </p>
+            </div>
+            
+            <div class="feature-card bg-white p-8 rounded-2xl shadow-lg text-center">
+              <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                <span class="text-3xl">🤖</span>
+              </div>
+              <h3 class="text-xl font-semibold mb-4 text-gray-800">AI 정확 분석</h3>
+              <p class="text-gray-600 leading-relaxed">
+                최신 AI 기술로 약품을 정확하게 식별합니다. 지속적인 학습으로 정확도가 계속 향상됩니다.
+              </p>
+            </div>
+            
+            <div class="feature-card bg-white p-8 rounded-2xl shadow-lg text-center">
+              <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                <span class="text-3xl">📋</span>
+              </div>
+              <h3 class="text-xl font-semibold mb-4 text-gray-800">상세한 정보</h3>
+              <p class="text-gray-600 leading-relaxed">
+                효능, 용법용량, 주의사항까지 필요한 모든 의약품 정보를 한 번에 확인할 수 있습니다.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- How It Works Section -->
+      <section id="how-it-works" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+          <h2 class="text-3xl md:text-4xl font-bold text-center mb-16 text-gray-800">
+            사용법이 이렇게 간단합니다
+          </h2>
+          
+          <div class="grid md:grid-cols-3 gap-8">
+            <div class="text-center">
+              <div class="w-20 h-20 bg-gradient-to-r from-purple-500 to-blue-500 rounded-full flex items-center justify-center mx-auto mb-6">
+                <span class="text-white text-2xl font-bold">1</span>
+              </div>
+              <h3 class="text-xl font-semibold mb-4">촬영</h3>
+              <p class="text-gray-600">약품을 카메라로 촬영하세요</p>
+            </div>
+            
+            <div class="text-center">
+              <div class="w-20 h-20 bg-gradient-to-r from-purple-500 to-blue-500 rounded-full flex items-center justify-center mx-auto mb-6">
+                <span class="text-white text-2xl font-bold">2</span>
+              </div>
+              <h3 class="text-xl font-semibold mb-4">분석</h3>
+              <p class="text-gray-600">AI가 약품을 자동으로 식별합니다</p>
+            </div>
+            
+            <div class="text-center">
+              <div class="w-20 h-20 bg-gradient-to-r from-purple-500 to-blue-500 rounded-full flex items-center justify-center mx-auto mb-6">
+                <span class="text-white text-2xl font-bold">3</span>
+              </div>
+              <h3 class="text-xl font-semibold mb-4">확인</h3>
+              <p class="text-gray-600">상세한 약품 정보를 확인하세요</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- CTA Section -->
+      <section class="py-20 gradient-bg text-white">
+        <div class="container mx-auto px-6 text-center">
+          <h2 class="text-3xl md:text-4xl font-bold mb-6">
+            지금 바로 시작해보세요
+          </h2>
+          <p class="text-xl mb-8 text-purple-100">
+            무료로 다운로드하고 안전한 의약품 사용을 시작하세요
+          </p>
+          <a href="#download" class="inline-flex items-center bg-yellow-400 text-gray-800 px-8 py-4 rounded-xl font-semibold hover:bg-yellow-300 transition-all download-btn">
+            <svg class="w-6 h-6 mr-3" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M3 17a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm3.293-7.707a1 1 0 011.414 0L9 10.586V3a1 1 0 112 0v7.586l1.293-1.293a1 1 0 111.414 1.414l-3 3a1 1 0 01-1.414 0l-3-3a1 1 0 010-1.414z" clip-rule="evenodd" />
+            </svg>
+            무료 다운로드
+          </a>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-300 py-12">
+      <div class="container mx-auto px-6">
+        <div class="flex flex-col md:flex-row justify-between items-center">
+          <div class="flex items-center space-x-2 mb-6 md:mb-0">
+            <div class="w-8 h-8 bg-gradient-to-r from-purple-500 to-blue-500 rounded-lg flex items-center justify-center">
+              <span class="text-white font-bold text-lg">💊</span>
+            </div>
+            <span class="text-xl font-bold text-white">PillSnap</span>
+          </div>
+          
+          <div class="flex flex-col md:flex-row items-center space-y-4 md:space-y-0 md:space-x-8">
+            <a href="/privacy.html" class="hover:text-white transition-colors">개인정보처리방침</a>
+            <a href="/terms.html" class="hover:text-white transition-colors">이용약관</a>
+            <a href="mailto:contact@pillsnap.co.kr" class="hover:text-white transition-colors">문의하기</a>
+          </div>
+        </div>
+        
+        <div class="border-t border-gray-700 mt-8 pt-8 text-center text-sm">
+          <p>&copy; 2025 PillSnap. All rights reserved. | 의료기기 신고번호: 준비중</p>
+          <p class="mt-2 text-gray-400">
+            ⚠️ PillSnap은 의료 상담을 대체할 수 없습니다. 복용 전 반드시 의사 또는 약사와 상담하세요.
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Smooth Scroll Script -->
+    <script>
+      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+          e.preventDefault();
+          const target = document.querySelector(this.getAttribute('href'));
+          if (target) {
+            target.scrollIntoView({
+              behavior: 'smooth',
+              block: 'start'
+            });
+          }
+        });
+      });
+    </script>
+  </body>
+</html>
