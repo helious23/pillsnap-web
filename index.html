@@ -7,12 +7,13 @@
     <meta name="description" content="사진 한 장으로 약품 정보를 확인하세요. AI 기술로 정확한 의약품 정보를 제공합니다." />
     
     <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
     <link rel="icon" type="image/x-icon" href="/favicon.ico">
     
     <!-- Open Graph for 소셜 미디어 공유 -->
     <meta property="og:title" content="PillSnap - AI 약품 식별 앱" />
     <meta property="og:description" content="사진 한 장으로 약품 정보를 확인하세요. AI 기술로 정확한 의약품 정보를 제공합니다." />
-    <meta property="og:image" content="https://www.pillsnap.co.kr/og-image.png" />
+    <meta property="og:image" content="https://www.pillsnap.co.kr/og-image.svg" />
     <meta property="og:url" content="https://www.pillsnap.co.kr" />
     <meta property="og:type" content="website" />
     
@@ -20,7 +21,7 @@
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="PillSnap - AI 약품 식별 앱" />
     <meta name="twitter:description" content="사진 한 장으로 약품 정보를 확인하세요" />
-    <meta name="twitter:image" content="https://www.pillsnap.co.kr/og-image.png" />
+    <meta name="twitter:image" content="https://www.pillsnap.co.kr/og-image.svg" />
     
     <!-- TailwindCSS -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -30,6 +31,34 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     
+    <!-- 구조화된 데이터 (JSON-LD) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "MobileApplication",
+      "name": "PillSnap",
+      "description": "현직 약사가 개발한 AI 기반 약품 식별 앱. 사진 촬영으로 의약품 정보를 정확하고 신속하게 제공합니다.",
+      "url": "https://www.pillsnap.co.kr",
+      "applicationCategory": "HealthApplication",
+      "operatingSystem": ["Android", "iOS"],
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "KRW"
+      },
+      "author": {
+        "@type": "Organization",
+        "name": "PillSnap",
+        "description": "현직 약사가 개발한 전문 의약품 정보 서비스"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "PillSnap",
+        "url": "https://www.pillsnap.co.kr"
+      }
+    }
+    </script>
+
     <!-- 커스텀 스타일 -->
     <style>
       body {
@@ -84,14 +113,18 @@
       <section class="pt-24 pb-20 gradient-bg text-white">
         <div class="container mx-auto px-6 text-center hero-animation">
           <h1 class="text-4xl md:text-6xl font-bold mb-6 leading-tight">
-            약을 찍으면,<br />
+            약을 촬영하면,<br />
             <span class="text-yellow-300">AI가 알려드립니다</span>
           </h1>
-          <p class="text-xl md:text-2xl mb-8 text-purple-100">
-            의약품 정보를 가장 쉽고 빠르게 확인하세요
+          <p class="text-xl md:text-2xl mb-4 text-yellow-300 font-semibold">
+            🏥 현직 약사가 직접 개발한 전문 서비스
           </p>
-          <p class="text-lg mb-12 text-purple-200 max-w-2xl mx-auto">
-            사진 한 장만 찍으면 AI가 약품을 식별하고, 효능·용법·주의사항까지 상세한 정보를 제공합니다.
+          <p class="text-lg mb-8 text-purple-100">
+            의약품 정보를 가장 정확하고 신뢰할 수 있게 제공합니다
+          </p>
+          <p class="text-base mb-12 text-purple-200 max-w-2xl mx-auto">
+            사진 한 장만 촬영하면 AI가 약품을 식별하고, 약사의 전문 지식을 바탕으로<br />
+            효능·용법·주의사항까지 상세한 정보를 제공합니다.
           </p>
           
           <div id="download" class="flex flex-col sm:flex-row gap-4 justify-center items-center mb-16">
@@ -118,9 +151,25 @@
           <h2 class="text-3xl md:text-4xl font-bold text-center mb-4 text-gray-800">
             왜 PillSnap인가요?
           </h2>
-          <p class="text-xl text-center text-gray-600 mb-16 max-w-3xl mx-auto">
+          <p class="text-xl text-center text-gray-600 mb-8 max-w-3xl mx-auto">
             복잡한 약품 정보 검색은 이제 그만. 간단한 사진 촬영만으로 모든 정보를 확인하세요.
           </p>
+          <div class="bg-blue-50 border border-blue-200 rounded-lg p-6 mb-16 max-w-4xl mx-auto">
+            <div class="flex items-start space-x-4">
+              <div class="flex-shrink-0">
+                <div class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center">
+                  <span class="text-2xl">👨‍⚕️</span>
+                </div>
+              </div>
+              <div>
+                <h3 class="text-lg font-semibold text-blue-900 mb-2">약사의 전문성을 담은 서비스</h3>
+                <p class="text-blue-700 leading-relaxed">
+                  10년 이상 경력의 현직 약사가 직접 개발하고 검증한 시스템으로, 
+                  단순한 이미지 인식을 넘어 약학적 전문 지식을 바탕으로 한 정확한 정보를 제공합니다.
+                </p>
+              </div>
+            </div>
+          </div>
           
           <div class="grid md:grid-cols-3 gap-8">
             <div class="feature-card bg-white p-8 rounded-2xl shadow-lg text-center">
@@ -129,7 +178,7 @@
               </div>
               <h3 class="text-xl font-semibold mb-4 text-gray-800">간편한 촬영</h3>
               <p class="text-gray-600 leading-relaxed">
-                스마트폰 카메라로 약품을 촬영하기만 하면 됩니다. 복잡한 입력 과정 없이 간단하게!
+                스마트폰 카메라로 약품을 촬영하기만 하면 됩니다. 약사가 설계한 직관적인 인터페이스로 누구나 쉽게!
               </p>
             </div>
             
@@ -137,9 +186,9 @@
               <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-6">
                 <span class="text-3xl">🤖</span>
               </div>
-              <h3 class="text-xl font-semibold mb-4 text-gray-800">AI 정확 분석</h3>
+              <h3 class="text-xl font-semibold mb-4 text-gray-800">약사 검증 AI</h3>
               <p class="text-gray-600 leading-relaxed">
-                최신 AI 기술로 약품을 정확하게 식별합니다. 지속적인 학습으로 정확도가 계속 향상됩니다.
+                약사의 전문 지식으로 훈련된 AI가 약품을 정확하게 식별합니다. 지속적인 전문가 검증으로 신뢰도가 계속 향상됩니다.
               </p>
             </div>
             
@@ -147,9 +196,9 @@
               <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6">
                 <span class="text-3xl">📋</span>
               </div>
-              <h3 class="text-xl font-semibold mb-4 text-gray-800">상세한 정보</h3>
+              <h3 class="text-xl font-semibold mb-4 text-gray-800">전문가급 정보</h3>
               <p class="text-gray-600 leading-relaxed">
-                효능, 용법용량, 주의사항까지 필요한 모든 의약품 정보를 한 번에 확인할 수 있습니다.
+                효능, 용법용량, 주의사항, 상호작용까지 약사 수준의 전문적이고 정확한 의약품 정보를 제공합니다.
               </p>
             </div>
           </div>
@@ -229,14 +278,21 @@
         </div>
         
         <div class="border-t border-gray-700 mt-8 pt-8 text-center text-sm">
-          <p>&copy; 2025 PillSnap. All rights reserved. | 의료기기 신고번호: 준비중</p>
-          <p class="mt-2 text-gray-400">
-            ⚠️ PillSnap은 의료 상담을 대체할 수 없습니다. 복용 전 반드시 의사 또는 약사와 상담하세요.
+          <p>&copy; 2025 PillSnap. All rights reserved.</p>
+          <p class="mt-4 text-yellow-300 bg-gray-800 rounded-lg p-4 max-w-3xl mx-auto">
+            ⚠️ <strong>중요:</strong> PillSnap은 의약품 정보 제공 서비스로, 의료 진단이나 상담을 대체할 수 없습니다.<br>
+            복용 전 반드시 의사 또는 약사와 상담하시기 바랍니다.
+          </p>
+          <p class="mt-3 text-xs text-gray-500">
+            본 서비스는 현직 약사가 개발한 정보 제공 목적의 애플리케이션입니다.
           </p>
         </div>
       </div>
     </footer>
 
+    <!-- Cloudflare Web Analytics -->
+    <script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "YOUR_TOKEN_HERE"}'></script>
+    
     <!-- Smooth Scroll Script -->
     <script>
       document.querySelectorAll('a[href^="#"]').forEach(anchor => {

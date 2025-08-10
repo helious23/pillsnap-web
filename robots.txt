@@ -1,0 +1,18 @@
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://www.pillsnap.co.kr/sitemap.xml
+
+# Disallow crawling of sensitive paths (none for now)
+# Disallow: /private
+
+# Allow search engines to crawl main content
+Allow: /index.html
+Allow: /privacy.html
+Allow: /terms.html
+Allow: /favicon.svg
+Allow: /og-image.svg
+
+# Crawl-delay (optional - be considerate to server resources)
+Crawl-delay: 1
