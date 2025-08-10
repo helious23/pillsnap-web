@@ -1,6 +1,10 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
   <defs>
     <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#4ECDC4;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#44A08D;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="pillGradient" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" style="stop-color:#667eea;stop-opacity:1" />
       <stop offset="100%" style="stop-color:#764ba2;stop-opacity:1" />
     </linearGradient>
@@ -9,40 +13,43 @@
   <!-- Background -->
   <rect width="1200" height="630" fill="url(#bgGradient)"/>
   
-  <!-- Main pill illustration -->
-  <ellipse cx="300" cy="315" rx="80" ry="35" fill="white" opacity="0.9"/>
-  <line x1="300" y1="280" x2="300" y2="350" stroke="#667eea" stroke-width="6"/>
-  
-  <!-- Additional pills -->
-  <ellipse cx="200" cy="400" rx="40" ry="18" fill="white" opacity="0.7" transform="rotate(15 200 400)"/>
-  <ellipse cx="400" cy="450" rx="35" ry="16" fill="white" opacity="0.6" transform="rotate(-20 400 450)"/>
-  <ellipse cx="180" cy="250" rx="30" ry="14" fill="white" opacity="0.5" transform="rotate(45 180 250)"/>
-  
-  <!-- AI Circuit pattern -->
-  <g opacity="0.3" stroke="white" stroke-width="2" fill="none">
-    <circle cx="500" cy="200" r="8"/>
-    <circle cx="520" cy="180" r="6"/>
-    <circle cx="540" cy="220" r="5"/>
-    <line x1="500" y1="200" x2="520" y2="180"/>
-    <line x1="520" y1="180" x2="540" y2="220"/>
+  <!-- Large PillSnap Logo (약품 + 돋보기) -->
+  <g transform="translate(200, 200)">
+    <!-- Main pill capsule -->
+    <ellipse cx="0" cy="0" rx="120" ry="60" fill="white" stroke="url(#pillGradient)" stroke-width="8"/>
+    <ellipse cx="-60" cy="0" rx="60" ry="60" fill="url(#pillGradient)" opacity="0.8"/>
+    
+    <!-- Magnifying glass -->
+    <circle cx="80" cy="80" r="70" fill="none" stroke="url(#pillGradient)" stroke-width="12"/>
+    <circle cx="80" cy="80" r="45" fill="#4ECDC4" opacity="0.3"/>
+    <line x1="135" y1="135" x2="180" y2="180" stroke="url(#pillGradient)" stroke-width="12" stroke-linecap="round"/>
   </g>
   
   <!-- Main text -->
-  <text x="600" y="250" font-family="'Noto Sans KR', Arial, sans-serif" font-size="64" font-weight="bold" fill="white">PillSnap</text>
-  <text x="600" y="320" font-family="'Noto Sans KR', Arial, sans-serif" font-size="36" fill="#fbbf24">약을 촬영하면, AI가 알려드립니다</text>
-  <text x="600" y="380" font-family="'Noto Sans KR', Arial, sans-serif" font-size="24" fill="white" opacity="0.9">현직 약사가 개발한 전문 의약품 정보 서비스</text>
+  <text x="600" y="200" font-family="'Noto Sans KR', Arial, sans-serif" font-size="72" font-weight="bold" fill="white">PillSnap</text>
+  <text x="600" y="280" font-family="'Noto Sans KR', Arial, sans-serif" font-size="40" fill="#fbbf24">약을 촬영하면, AI가 알려드립니다</text>
+  <text x="600" y="340" font-family="'Noto Sans KR', Arial, sans-serif" font-size="28" fill="white" opacity="0.9">현직 약사가 개발한 전문 의약품 정보 서비스</text>
   
-  <!-- Camera icon -->
-  <g transform="translate(850, 400)">
-    <rect x="0" y="10" width="60" height="40" rx="8" fill="white" opacity="0.8"/>
-    <circle cx="30" cy="30" r="12" fill="#667eea"/>
-    <circle cx="30" cy="30" r="6" fill="white"/>
-    <rect x="45" y="5" width="10" height="8" rx="2" fill="white" opacity="0.8"/>
+  <!-- 추가 장식 요소들 -->
+  <!-- 작은 약품들 -->
+  <g opacity="0.4">
+    <ellipse cx="100" cy="500" rx="25" ry="12" fill="white" transform="rotate(15 100 500)"/>
+    <ellipse cx="1000" cy="100" rx="20" ry="10" fill="white" transform="rotate(-30 1000 100)"/>
+    <ellipse cx="1100" cy="500" rx="30" ry="15" fill="white" transform="rotate(45 1100 500)"/>
   </g>
   
-  <!-- Pharmacy symbol -->
-  <g transform="translate(950, 150)">
-    <circle cx="0" cy="0" r="25" fill="white" opacity="0.8"/>
-    <path d="M-15,-5 L15,-5 L15,5 L5,5 L5,15 L-5,15 L-5,5 L-15,5 Z" fill="#667eea"/>
+  <!-- AI 네트워크 패턴 -->
+  <g opacity="0.3" stroke="white" stroke-width="3" fill="none">
+    <circle cx="900" cy="450" r="12"/>
+    <circle cx="950" cy="420" r="8"/>
+    <circle cx="980" cy="480" r="10"/>
+    <line x1="900" y1="450" x2="950" y2="420"/>
+    <line x1="950" y1="420" x2="980" y2="480"/>
+  </g>
+  
+  <!-- 출시 예정 배지 -->
+  <g transform="translate(850, 500)">
+    <rect x="0" y="0" width="200" height="50" rx="25" fill="white" opacity="0.9"/>
+    <text x="100" y="32" font-family="'Noto Sans KR', Arial, sans-serif" font-size="18" font-weight="bold" text-anchor="middle" fill="url(#pillGradient)">곧 출시 예정!</text>
   </g>
 </svg>
