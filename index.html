@@ -340,28 +340,113 @@
                     <span>복용 기록 관리</span>
                   </label>
                   <label class="flex items-center space-x-3 cursor-pointer">
-                    <input type="radio" name="interest" value="other" required class="text-purple-500">
+                    <input type="radio" name="interest" value="other" required class="text-purple-500" onchange="toggleOtherInput('interest-other', this)">
                     <span>기타</span>
                   </label>
+                </div>
+                <div id="interest-other" class="mt-3 hidden">
+                  <textarea name="interestOther" rows="2" 
+                    class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all"
+                    placeholder="관심있는 기능을 구체적으로 알려주세요..."></textarea>
                 </div>
               </div>
 
               <div>
-                <label for="suggestions" class="block text-sm font-medium text-gray-700 mb-2">
-                  PillSnap에서 꼭 필요하다고 생각하는 기능이나 개선사항이 있다면 알려주세요
+                <label class="block text-sm font-medium text-gray-700 mb-2">
+                  PillSnap에서 꼭 필요하다고 생각하는 기능은? <span class="text-gray-400">(복수 선택 가능)</span>
                 </label>
-                <textarea id="suggestions" name="suggestions" rows="4"
-                  class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all"
-                  placeholder="예: 약품 검색 시 더 정확한 결과를 원해요, 복용량 계산기 기능이 있으면 좋겠어요 등..."></textarea>
+                <div class="grid md:grid-cols-2 gap-3">
+                  <label class="flex items-center space-x-3 cursor-pointer">
+                    <input type="checkbox" name="suggestions" value="drug-interaction" class="text-purple-500 focus:ring-purple-500">
+                    <span>약물 상호작용 체크</span>
+                  </label>
+                  <label class="flex items-center space-x-3 cursor-pointer">
+                    <input type="checkbox" name="suggestions" value="reminder" class="text-purple-500 focus:ring-purple-500">
+                    <span>복용 알림 기능</span>
+                  </label>
+                  <label class="flex items-center space-x-3 cursor-pointer">
+                    <input type="checkbox" name="suggestions" value="storage-guide" class="text-purple-500 focus:ring-purple-500">
+                    <span>약품 보관법 안내</span>
+                  </label>
+                  <label class="flex items-center space-x-3 cursor-pointer">
+                    <input type="checkbox" name="suggestions" value="side-effects" class="text-purple-500 focus:ring-purple-500">
+                    <span>부작용 정보 제공</span>
+                  </label>
+                  <label class="flex items-center space-x-3 cursor-pointer">
+                    <input type="checkbox" name="suggestions" value="search-function" class="text-purple-500 focus:ring-purple-500">
+                    <span>약품명 검색 기능</span>
+                  </label>
+                  <label class="flex items-center space-x-3 cursor-pointer">
+                    <input type="checkbox" name="suggestions" value="usage-record" class="text-purple-500 focus:ring-purple-500">
+                    <span>복용 기록 관리</span>
+                  </label>
+                  <label class="flex items-center space-x-3 cursor-pointer">
+                    <input type="checkbox" name="suggestions" value="pharmacy-finder" class="text-purple-500 focus:ring-purple-500">
+                    <span>주변 약국 찾기</span>
+                  </label>
+                  <label class="flex items-center space-x-3 cursor-pointer">
+                    <input type="checkbox" name="suggestions" value="dosage-calculator" class="text-purple-500 focus:ring-purple-500">
+                    <span>복용량 계산기</span>
+                  </label>
+                  <label class="flex items-center space-x-3 cursor-pointer">
+                    <input type="checkbox" name="suggestions" value="other" class="text-purple-500 focus:ring-purple-500" onchange="toggleOtherInput('suggestions-other', this)">
+                    <span>기타</span>
+                  </label>
+                </div>
+                <div id="suggestions-other" class="mt-3 hidden">
+                  <textarea name="suggestionsOther" rows="3" 
+                    class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all"
+                    placeholder="필요한 기능을 구체적으로 알려주세요..."></textarea>
+                </div>
               </div>
 
               <div>
-                <label for="concerns" class="block text-sm font-medium text-gray-700 mb-2">
-                  약품 정보 앱 사용 시 가장 우려되는 점은 무엇인가요?
+                <label class="block text-sm font-medium text-gray-700 mb-2">
+                  약품 정보 앱 사용 시 우려되는 점은? <span class="text-gray-400">(복수 선택 가능)</span>
                 </label>
-                <textarea id="concerns" name="concerns" rows="3"
-                  class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all"
-                  placeholder="예: 정보의 정확성, 개인정보 보안, 사용 편의성 등..."></textarea>
+                <div class="grid md:grid-cols-2 gap-3">
+                  <label class="flex items-center space-x-3 cursor-pointer">
+                    <input type="checkbox" name="concerns" value="accuracy" class="text-purple-500 focus:ring-purple-500">
+                    <span>정보의 정확성</span>
+                  </label>
+                  <label class="flex items-center space-x-3 cursor-pointer">
+                    <input type="checkbox" name="concerns" value="privacy" class="text-purple-500 focus:ring-purple-500">
+                    <span>개인정보 보안</span>
+                  </label>
+                  <label class="flex items-center space-x-3 cursor-pointer">
+                    <input type="checkbox" name="concerns" value="misrecognition" class="text-purple-500 focus:ring-purple-500">
+                    <span>약품 오인식 가능성</span>
+                  </label>
+                  <label class="flex items-center space-x-3 cursor-pointer">
+                    <input type="checkbox" name="concerns" value="usability" class="text-purple-500 focus:ring-purple-500">
+                    <span>사용 편의성</span>
+                  </label>
+                  <label class="flex items-center space-x-3 cursor-pointer">
+                    <input type="checkbox" name="concerns" value="internet-required" class="text-purple-500 focus:ring-purple-500">
+                    <span>인터넷 연결 필요</span>
+                  </label>
+                  <label class="flex items-center space-x-3 cursor-pointer">
+                    <input type="checkbox" name="concerns" value="battery-drain" class="text-purple-500 focus:ring-purple-500">
+                    <span>배터리 소모</span>
+                  </label>
+                  <label class="flex items-center space-x-3 cursor-pointer">
+                    <input type="checkbox" name="concerns" value="data-usage" class="text-purple-500 focus:ring-purple-500">
+                    <span>데이터 사용량</span>
+                  </label>
+                  <label class="flex items-center space-x-3 cursor-pointer">
+                    <input type="checkbox" name="concerns" value="cost" class="text-purple-500 focus:ring-purple-500">
+                    <span>이용 비용</span>
+                  </label>
+                  <label class="flex items-center space-x-3 cursor-pointer">
+                    <input type="checkbox" name="concerns" value="other" class="text-purple-500 focus:ring-purple-500" onchange="toggleOtherInput('concerns-other', this)">
+                    <span>기타</span>
+                  </label>
+                </div>
+                <div id="concerns-other" class="mt-3 hidden">
+                  <textarea name="concernsOther" rows="3" 
+                    class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all"
+                    placeholder="우려사항을 구체적으로 알려주세요..."></textarea>
+                </div>
               </div>
 
               <div class="flex items-start space-x-3">
@@ -460,11 +545,52 @@
     
     <!-- Feedback Form Script -->
     <script>
+      // 기타 선택 시 textarea 토글 함수
+      function toggleOtherInput(targetId, checkbox) {
+        const target = document.getElementById(targetId);
+        if (checkbox.checked) {
+          target.classList.remove('hidden');
+          target.querySelector('textarea').focus();
+        } else {
+          target.classList.add('hidden');
+          target.querySelector('textarea').value = '';
+        }
+      }
+
+      // 체크박스 배열을 문자열로 변환하는 함수
+      function formatCheckboxArray(formData, name) {
+        const values = formData.getAll(name);
+        if (values.length === 0) return '없음';
+        return values.join(', ');
+      }
+
       document.getElementById('feedbackForm').addEventListener('submit', function(e) {
         e.preventDefault();
         
         const formData = new FormData(this);
         const data = Object.fromEntries(formData.entries());
+        
+        // 체크박스 배열 처리
+        const suggestions = formatCheckboxArray(formData, 'suggestions');
+        const concerns = formatCheckboxArray(formData, 'concerns');
+        
+        // 관심 기능에 기타 내용 추가
+        let interestText = data.interest;
+        if (data.interest === 'other' && data.interestOther) {
+          interestText += ` (${data.interestOther})`;
+        }
+        
+        // 제안사항에 기타 내용 추가
+        let suggestionsText = suggestions;
+        if (formData.getAll('suggestions').includes('other') && data.suggestionsOther) {
+          suggestionsText += ` / 기타: ${data.suggestionsOther}`;
+        }
+        
+        // 우려사항에 기타 내용 추가
+        let concernsText = concerns;
+        if (formData.getAll('concerns').includes('other') && data.concernsOther) {
+          concernsText += ` / 기타: ${data.concernsOther}`;
+        }
         
         // 이메일 제목 생성
         const subject = `[PillSnap 피드백] ${data.name}님의 소중한 의견`;
@@ -478,13 +604,13 @@ PillSnap 피드백
 - 이메일: ${data.email}
 - 사용자 유형: ${data.userType}
 
-🎯 관심 기능: ${data.interest}
+🎯 가장 관심있는 기능: ${interestText}
 
-💡 제안사항 및 필요한 기능:
-${data.suggestions || '없음'}
+💡 필요한 기능 (복수선택):
+${suggestionsText}
 
-😰 우려사항:
-${data.concerns || '없음'}
+😰 우려사항 (복수선택):
+${concernsText}
 
 📧 뉴스레터 구독: ${data.newsletter ? '예' : '아니오'}
 
