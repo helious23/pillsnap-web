@@ -549,36 +549,21 @@
       </div>
     </footer>
 
-    <!-- Configuration -->
-    <script src="/assets/js/config.js"></script>
-    
     <!-- Google Analytics -->
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-SXSQE2VPBJ"></script>
     <script>
-      // Load Google Analytics dynamically with config
-      if (window.APP_CONFIG && window.APP_CONFIG.GA_MEASUREMENT_ID !== 'G-XXXXXXXXXX') {
-        const script = document.createElement('script');
-        script.async = true;
-        script.src = `https://www.googletagmanager.com/gtag/js?id=${window.APP_CONFIG.GA_MEASUREMENT_ID}`;
-        document.head.appendChild(script);
-        
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', window.APP_CONFIG.GA_MEASUREMENT_ID);
-      }
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-SXSQE2VPBJ');
     </script>
 
+    <!-- Configuration -->
+    <script src="/assets/js/config.js"></script>
+
     <!-- Cloudflare Web Analytics -->
-    <script>
-      // Load Cloudflare Analytics dynamically with config
-      if (window.APP_CONFIG && window.APP_CONFIG.CF_BEACON_TOKEN !== 'YOUR_TOKEN_HERE') {
-        const script = document.createElement('script');
-        script.defer = true;
-        script.src = 'https://static.cloudflareinsights.com/beacon.min.js';
-        script.setAttribute('data-cf-beacon', JSON.stringify({token: window.APP_CONFIG.CF_BEACON_TOKEN}));
-        document.head.appendChild(script);
-      }
-    </script>
+    <script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "YOUR_TOKEN_HERE"}'></script>
     
     <!-- Feedback Form Script -->
     <script>
