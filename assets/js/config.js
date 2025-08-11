@@ -4,7 +4,7 @@ window.APP_CONFIG = {
   GA_MEASUREMENT_ID: 'G-SXSQE2VPBJ', // Replace with actual ID
   
   // Cloudflare Web Analytics  
-  CF_BEACON_TOKEN: 'YOUR_TOKEN_HERE', // Replace with actual token
+  CF_BEACON_TOKEN: 'f2e677b8e6504abfb3d0e09aca1e6398', // Cloudflare token
   
   // Web3Forms
   WEB3FORMS_ACCESS_KEY: 'f6faf7e3-fa62-4ff3-b7d8-1b31df67831b'
