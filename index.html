@@ -595,17 +595,56 @@
         return re.test(email);
       }
 
-      // 폼 제출 처리
+      // =============================================================================
+      // PillSnap 웹사이트 - 포괄적인 Google Analytics 이벤트 추적 코드
+      // =============================================================================
+
+      // 6. 트래픽 소스 감지 함수
+      function getTrafficSource() {
+        const referrer = document.referrer;
+        const utm_source = new URLSearchParams(window.location.search).get('utm_source');
+        
+        if (utm_source) {
+          return utm_source;
+        } else if (referrer.includes('google.')) {
+          return 'google_search';
+        } else if (referrer.includes('naver.')) {
+          return 'naver_search';
+        } else if (referrer.includes('facebook.') || referrer.includes('instagram.')) {
+          return 'social_media';
+        } else if (referrer === '') {
+          return 'direct';
+        } else {
+          return 'other_referral';
+        }
+      }
+
+      // 1. 기존 피드백 폼 제출 이벤트
       document.getElementById('feedbackForm').addEventListener('submit', function(e) {
-        // Google Analytics 이벤트 전송 - 새로 추가!
+        // Google Analytics 이벤트 전송
         if (typeof gtag !== 'undefined') {
+          // 이메일 수집 이벤트
+          gtag('event', 'email_signup', {
+            'event_category': 'Lead Generation',
+            'event_label': 'Feedback Form Email',
+            'source': getTrafficSource()
+          });
+
+          // 피드백/기능 요청 이벤트  
+          gtag('event', 'feature_request', {
+            'event_category': 'User Feedback',
+            'event_label': 'Feature Request Form',
+            'source': getTrafficSource()
+          });
+
+          // 기존 generate_lead 이벤트
           gtag('event', 'generate_lead', {
             'feedback_submit': 'feedback_submit',
             'page_location': window.location.href
           });
         }
 
-        // 이메일 검증
+        // 기존 이메일 검증 코드
         const emailInput = document.getElementById('korean-email');
         const emailError = document.getElementById('email-error');
         
@@ -632,6 +671,102 @@
         `;
         submitBtn.disabled = true;
         submitBtn.className = submitBtn.className.replace('from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700', 'from-gray-500 to-gray-600');
+      });
+
+      // 2. 다운로드 버튼 관심 표시 추적
+      document.querySelectorAll('.download-btn').forEach(btn => {
+        btn.addEventListener('click', function() {
+          if (typeof gtag !== 'undefined') {
+            gtag('event', 'download_click', {
+              'event_category': 'User Interest',
+              'event_label': this.textContent.includes('App Store') ? 'iOS Interest' : 'Android Interest',
+              'source': getTrafficSource()
+            });
+          }
+        });
+      });
+
+      // 3. 의견 보내기 CTA 버튼 클릭
+      const feedbackCTA = document.querySelector('a[href="#feedback"]');
+      if (feedbackCTA) {
+        feedbackCTA.addEventListener('click', function() {
+          if (typeof gtag !== 'undefined') {
+            gtag('event', 'feedback_cta_click', {
+              'event_category': 'Navigation',
+              'event_label': 'Hero CTA Button',
+              'source': getTrafficSource()
+            });
+          }
+        });
+      }
+
+      // 4. 섹션별 스크롤 추적 (사용자 관심도 측정)
+      let sectionsViewed = new Set();
+      function trackSectionViews() {
+        const sections = ['features', 'how-it-works', 'feedback'];
+        
+        sections.forEach(sectionId => {
+          const section = document.getElementById(sectionId);
+          if (section && !sectionsViewed.has(sectionId)) {
+            const rect = section.getBoundingClientRect();
+            if (rect.top < window.innerHeight && rect.bottom > 0) {
+              sectionsViewed.add(sectionId);
+              if (typeof gtag !== 'undefined') {
+                gtag('event', 'section_view', {
+                  'event_category': 'Engagement',
+                  'event_label': sectionId,
+                  'source': getTrafficSource()
+                });
+              }
+            }
+          }
+        });
+      }
+
+      window.addEventListener('scroll', trackSectionViews);
+
+      // 5. 페이지 체류 시간 추적
+      let startTime = Date.now();
+      let timeTracked = false;
+
+      window.addEventListener('beforeunload', function() {
+        if (!timeTracked && typeof gtag !== 'undefined') {
+          const timeSpent = Math.round((Date.now() - startTime) / 1000);
+          if (timeSpent > 30) { // 30초 이상 체류한 경우만
+            gtag('event', 'engagement_time', {
+              'event_category': 'Engagement',
+              'event_label': 'Time on Page',
+              'value': timeSpent,
+              'source': getTrafficSource()
+            });
+          }
+          timeTracked = true;
+        }
+      });
+
+      // 7. 뉴스레터 구독 별도 추적
+      const newsletter = document.getElementById('newsletter');
+      if (newsletter) {
+        newsletter.addEventListener('change', function() {
+          if (this.checked && typeof gtag !== 'undefined') {
+            gtag('event', 'newsletter_signup', {
+              'event_category': 'Lead Generation',
+              'event_label': 'Newsletter Subscription',
+              'source': getTrafficSource()
+            });
+          }
+        });
+      }
+
+      // 8. 페이지 로드 완료 이벤트
+      window.addEventListener('load', function() {
+        if (typeof gtag !== 'undefined') {
+          gtag('event', 'page_loaded', {
+            'event_category': 'Page Performance',
+            'event_label': 'Homepage',
+            'source': getTrafficSource()
+          });
+        }
       });
 
       // 실시간 이메일 검증
