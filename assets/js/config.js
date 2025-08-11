@@ -1,7 +1,7 @@
 // Configuration loaded from environment variables or defaults
 window.APP_CONFIG = {
   // Google Analytics
-  GA_MEASUREMENT_ID: 'G-XXXXXXXXXX', // Replace with actual ID
+  GA_MEASUREMENT_ID: 'G-SXSQE2VPBJ', // Replace with actual ID
   
   // Cloudflare Web Analytics  
   CF_BEACON_TOKEN: 'YOUR_TOKEN_HERE', // Replace with actual token
