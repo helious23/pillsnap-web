@@ -597,6 +597,14 @@
 
       // 폼 제출 처리
       document.getElementById('feedbackForm').addEventListener('submit', function(e) {
+        // Google Analytics 이벤트 전송 - 새로 추가!
+        if (typeof gtag !== 'undefined') {
+          gtag('event', 'generate_lead', {
+            'feedback_submit': 'feedback_submit',
+            'page_location': window.location.href
+          });
+        }
+
         // 이메일 검증
         const emailInput = document.getElementById('korean-email');
         const emailError = document.getElementById('email-error');
