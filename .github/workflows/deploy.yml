@@ -1,0 +1,39 @@
+name: Deploy to Cloudflare Pages
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+      
+      - name: Setup environment
+        run: |
+          # Create config.js with environment variables from GitHub Secrets
+          cat > assets/js/config.js << EOF
+          // Configuration loaded from GitHub Secrets
+          window.APP_CONFIG = {
+            // Google Analytics
+            GA_MEASUREMENT_ID: '${{ secrets.GA_MEASUREMENT_ID || 'G-XXXXXXXXXX' }}',
+            
+            // Cloudflare Web Analytics  
+            CF_BEACON_TOKEN: '${{ secrets.CF_BEACON_TOKEN || 'YOUR_TOKEN_HERE' }}',
+            
+            // Web3Forms
+            WEB3FORMS_ACCESS_KEY: '${{ secrets.WEB3FORMS_ACCESS_KEY || 'f6faf7e3-fa62-4ff3-b7d8-1b31df67831b' }}'
+          };
+          EOF
+      
+      - name: Deploy to Cloudflare Pages
+        run: |
+          echo "Cloudflare Pages will automatically deploy this push"
+          echo "Deployment URL: https://www.pillsnap.co.kr"
