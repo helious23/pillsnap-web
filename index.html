@@ -4,68 +4,101 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>PillSnap - AI 약품 식별 앱</title>
-    <meta name="description" content="사진 한 장으로 약품 정보를 확인하세요. AI 기술로 정확한 의약품 정보를 제공합니다." />
-    
+    <meta
+      name="description"
+      content="사진 한 장으로 약품 정보를 확인하세요. AI 기술로 정확한 의약품 정보를 제공합니다."
+    />
+
     <!-- Favicon -->
-    <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/favicon-32.png">
-    <link rel="icon" type="image/png" sizes="64x64" href="/assets/images/icon-64.png">
-    <link rel="icon" type="image/png" sizes="128x128" href="/assets/images/icon-128.png">
-    <link rel="icon" type="image/x-icon" href="/assets/images/favicon.ico">
-    <link rel="apple-touch-icon" href="/assets/images/icon-128.png">
-    
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="/assets/images/favicon-32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="64x64"
+      href="/assets/images/icon-64.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="128x128"
+      href="/assets/images/icon-128.png"
+    />
+    <link rel="icon" type="image/x-icon" href="/assets/images/favicon.ico" />
+    <link rel="apple-touch-icon" href="/assets/images/icon-128.png" />
+
     <!-- Open Graph for 소셜 미디어 공유 -->
     <meta property="og:title" content="PillSnap - AI 약품 식별 앱" />
-    <meta property="og:description" content="사진 한 장으로 약품 정보를 확인하세요. AI 기술로 정확한 의약품 정보를 제공합니다." />
-    <meta property="og:image" content="https://www.pillsnap.co.kr/assets/images/icon-128.png" />
+    <meta
+      property="og:description"
+      content="사진 한 장으로 약품 정보를 확인하세요. AI 기술로 정확한 의약품 정보를 제공합니다."
+    />
+    <meta
+      property="og:image"
+      content="https://www.pillsnap.co.kr/assets/images/icon-128.png"
+    />
     <meta property="og:url" content="https://www.pillsnap.co.kr" />
     <meta property="og:type" content="website" />
-    
+
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="PillSnap - AI 약품 식별 앱" />
-    <meta name="twitter:description" content="사진 한 장으로 약품 정보를 확인하세요" />
-    <meta name="twitter:image" content="https://www.pillsnap.co.kr/assets/images/icon-128.png" />
-    
+    <meta
+      name="twitter:description"
+      content="사진 한 장으로 약품 정보를 확인하세요"
+    />
+    <meta
+      name="twitter:image"
+      content="https://www.pillsnap.co.kr/assets/images/icon-128.png"
+    />
+
     <!-- TailwindCSS -->
     <script src="https://cdn.tailwindcss.com"></script>
-    
+
     <!-- 커스텀 폰트 -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
     <!-- 구조화된 데이터 (JSON-LD) -->
     <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "MobileApplication",
-      "name": "PillSnap",
-      "description": "현직 약사가 개발한 AI 기반 약품 식별 앱. 사진 촬영으로 의약품 정보를 정확하고 신속하게 제공합니다.",
-      "url": "https://www.pillsnap.co.kr",
-      "applicationCategory": "HealthApplication",
-      "operatingSystem": ["Android", "iOS"],
-      "offers": {
-        "@type": "Offer",
-        "price": "0",
-        "priceCurrency": "KRW"
-      },
-      "author": {
-        "@type": "Organization",
+      {
+        "@context": "https://schema.org",
+        "@type": "MobileApplication",
         "name": "PillSnap",
-        "description": "현직 약사가 개발한 전문 의약품 정보 서비스"
-      },
-      "publisher": {
-        "@type": "Organization",
-        "name": "PillSnap",
-        "url": "https://www.pillsnap.co.kr"
+        "description": "현직 약사가 개발한 AI 기반 약품 식별 앱. 사진 촬영으로 의약품 정보를 정확하고 신속하게 제공합니다.",
+        "url": "https://www.pillsnap.co.kr",
+        "applicationCategory": "HealthApplication",
+        "operatingSystem": ["Android", "iOS"],
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "KRW"
+        },
+        "author": {
+          "@type": "Organization",
+          "name": "PillSnap",
+          "description": "현직 약사가 개발한 전문 의약품 정보 서비스"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "PillSnap",
+          "url": "https://www.pillsnap.co.kr"
+        }
       }
-    }
     </script>
 
     <!-- 커스텀 스타일 -->
     <style>
       body {
-        font-family: 'Noto Sans KR', sans-serif;
+        font-family: "Noto Sans KR", sans-serif;
       }
       .gradient-bg {
         background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
@@ -73,10 +106,6 @@
       .feature-card:hover {
         transform: translateY(-5px);
         transition: all 0.3s ease;
-      }
-      .download-btn:hover {
-        transform: scale(1.05);
-        transition: all 0.2s ease;
       }
       .hero-animation {
         animation: fadeInUp 1s ease-out;
@@ -91,20 +120,57 @@
           transform: translateY(0);
         }
       }
+      .tab-button {
+        transition: all 0.3s ease;
+      }
+      .tab-button.active {
+        background-color: white;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+      }
+      .form-group {
+        transition: all 0.3s ease;
+      }
+      .form-group.hidden {
+        opacity: 0;
+        height: 0;
+        overflow: hidden;
+        margin: 0;
+        padding: 0;
+      }
     </style>
   </head>
   <body class="bg-white text-gray-800">
     <!-- 네비게이션 -->
-    <header class="fixed top-0 w-full z-50 bg-white/90 backdrop-blur-sm shadow-sm">
-      <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+    <header
+      class="fixed top-0 w-full z-50 bg-white/90 backdrop-blur-sm shadow-sm"
+    >
+      <nav
+        class="container mx-auto px-6 py-4 flex justify-between items-center"
+      >
         <div class="flex items-center space-x-2">
-          <img src="/assets/images/icon-64.png" alt="PillSnap" class="w-8 h-8 rounded-lg">
+          <img
+            src="/assets/images/icon-64.png"
+            alt="PillSnap"
+            class="w-8 h-8 rounded-lg"
+          />
           <span class="text-xl font-bold text-gray-800">PillSnap</span>
         </div>
         <div class="hidden md:flex items-center space-x-8">
-          <a href="#features" class="text-gray-600 hover:text-purple-600 transition-colors">기능</a>
-          <a href="#how-it-works" class="text-gray-600 hover:text-purple-600 transition-colors">사용법</a>
-          <a href="#download" class="bg-purple-600 text-white px-6 py-2 rounded-full hover:bg-purple-700 transition-colors">다운로드</a>
+          <a
+            href="#features"
+            class="text-gray-600 hover:text-purple-600 transition-colors"
+            >기능</a
+          >
+          <a
+            href="#how-it-works"
+            class="text-gray-600 hover:text-purple-600 transition-colors"
+            >사용법</a
+          >
+          <a
+            href="#feedback"
+            class="bg-purple-600 text-white px-6 py-2 rounded-full hover:bg-purple-700 transition-colors"
+            >출시 알림/의견 남기기</a
+          >
         </div>
       </nav>
     </header>
@@ -112,112 +178,101 @@
     <main>
       <!-- Hero Section -->
       <section class="pt-24 pb-20 gradient-bg text-white">
-        <div class="container mx-auto px-6 text-center hero-animation">
-          <h1 class="text-3xl sm:text-4xl md:text-6xl font-bold mb-4 sm:mb-6 leading-tight">
-            약을 촬영하면,<br class="sm:hidden" />
-            <span class="sm:inline hidden"><br /></span>
-            <span class="text-yellow-300">AI가 알려드립니다</span>
+        <div
+          class="container mx-auto px-6 text-center hero-animation max-w-3xl"
+        >
+          <div
+            class="inline-flex items-center bg-white/15 text-yellow-200 text-xs sm:text-sm px-3 py-1 rounded-full mb-5"
+          >
+            <span class="mr-2">⏳</span> 출시 준비 중 – 대기자 우선 초대
+          </div>
+          <h1
+            class="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 leading-tight"
+          >
+            <span class="inline-block mb-2 sm:mb-3">약 이름 모르시나요? </span>
+            <br />
+            <span class="text-yellow-300">사진 한 장</span>이면 확인 끝.
           </h1>
-          <p class="text-lg sm:text-xl md:text-2xl mb-3 sm:mb-4 text-yellow-300 font-semibold">
-            🏥 현직 약사가 직접 개발한 전문 서비스
+          <p class="text-base sm:text-lg text-purple-100 mb-8">
+            <span>촬영만 하면 약 이름·성분·주의사항을 바로 알려드립니다.</span>
+            <br />
+            <span>AI와 현직 약사의 검증으로 더 안심하세요.</span>
           </p>
-          <p class="text-base sm:text-lg mb-6 sm:mb-8 text-purple-100 px-4 sm:px-0">
-            의약품 정보를 가장 정확하고 신뢰할 수 있게 제공합니다
-          </p>
-          <p class="text-sm sm:text-base mb-8 sm:mb-12 text-purple-200 max-w-2xl mx-auto px-4 sm:px-6 md:px-0">
-            사진 한 장만 촬영하면 AI가 약품을 식별하고,<br class="hidden sm:inline" /> 
-            약사의 전문 지식을 바탕으로 효능·용법·주의사항까지<br class="hidden sm:inline" /> 
-            상세한 정보를 제공합니다.
-          </p>
-          
-          <div id="download" class="flex flex-col sm:flex-row gap-4 justify-center items-center mb-16">
-            <div class="download-btn inline-flex items-center bg-gray-400 text-white px-8 py-4 rounded-xl font-semibold opacity-60 cursor-not-allowed">
-              <svg class="w-6 h-6 mr-3" viewBox="0 0 24 24" fill="currentColor">
-                <path d="M3,20.5V3.5C3,2.91 3.34,2.39 3.84,2.15L13.69,12L3.84,21.85C3.34,21.6 3,21.09 3,20.5M16.81,15.12L6.05,21.34L14.54,12.85L16.81,15.12M20.16,10.81C20.5,11.08 20.75,11.5 20.75,12C20.75,12.5 20.53,12.9 20.18,13.18L17.89,14.5L15.39,12L17.89,9.5L20.16,10.81M6.05,2.66L16.81,8.88L14.54,11.15L6.05,2.66Z"/>
-              </svg>
-              Google Play (출시 예정)
-            </div>
-            <div class="download-btn inline-flex items-center bg-gray-400 text-white px-8 py-4 rounded-xl font-semibold opacity-60 cursor-not-allowed">
-              <svg class="w-6 h-6 mr-3" viewBox="0 0 24 24" fill="currentColor">
-                <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/>
-              </svg>
-              App Store (출시 예정)
-            </div>
-          </div>
-          
-          <div class="text-center mb-8">
-            <p class="text-purple-200 text-sm mb-4">
-              🚀 더 나은 서비스를 위해 여러분의 의견이 필요합니다!
-            </p>
-            <a href="#feedback" class="inline-flex items-center bg-yellow-400 text-gray-800 px-6 py-3 rounded-lg font-semibold hover:bg-yellow-300 transition-all">
-              <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20">
-                <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"/>
-                <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"/>
-              </svg>
-              의견 보내기
-            </a>
-          </div>
+          <a
+            href="#feedback"
+            class="inline-flex items-center bg-yellow-400 text-gray-900 px-6 py-3 rounded-lg font-semibold hover:bg-yellow-300 transition"
+          >
+            출시 알림/의견 남기기
+          </a>
         </div>
       </section>
 
       <!-- Features Section -->
       <section id="features" class="py-20 bg-gray-50">
         <div class="container mx-auto px-6">
-          <h2 class="text-3xl md:text-4xl font-bold text-center mb-4 text-gray-800">
+          <h2
+            class="text-3xl md:text-4xl font-bold text-center mb-4 text-gray-800"
+          >
             왜 PillSnap인가요?
           </h2>
-          <p class="text-base sm:text-lg md:text-xl text-center text-gray-600 mb-8 max-w-3xl mx-auto px-4 sm:px-6">
-            복잡한 약품 정보 검색은 이제 그만.<br class="sm:hidden" />
-            간단한 사진 촬영만으로 모든 정보를 확인하세요.
+          <p
+            class="text-base sm:text-lg md:text-xl text-center text-gray-600 mb-12 max-w-2xl mx-auto"
+          >
+            간단한 사진 촬영만으로 정확한 약품 정보를 확인하세요.
           </p>
-          <div class="bg-blue-50 border border-blue-200 rounded-lg p-4 sm:p-6 mb-12 sm:mb-16 max-w-4xl mx-auto mx-4 sm:mx-auto">
-            <div class="flex flex-col sm:flex-row items-start sm:space-x-4">
-              <div class="flex-shrink-0 mb-3 sm:mb-0">
-                <div class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center">
-                  <span class="text-2xl">👨‍⚕️</span>
-                </div>
-              </div>
-              <div>
-                <h3 class="text-base sm:text-lg font-semibold text-blue-900 mb-2">약사의 전문성을 담은 서비스</h3>
-                <p class="text-sm sm:text-base text-blue-700 leading-relaxed">
-                  10년 이상 경력의 현직 약사가 직접 개발하고 검증한 시스템으로, 
-                  단순한 이미지 인식을 넘어 약학적 전문 지식을 바탕으로 한 정확한 정보를 제공합니다.
-                </p>
-              </div>
-            </div>
-          </div>
-          
+
           <div class="grid md:grid-cols-3 gap-8">
-            <div class="feature-card bg-white p-6 sm:p-8 rounded-2xl shadow-lg text-center">
-              <div class="w-14 h-14 sm:w-16 sm:h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4 sm:mb-6">
+            <div
+              class="feature-card bg-white p-6 sm:p-8 rounded-2xl shadow-lg text-center"
+            >
+              <div
+                class="w-14 h-14 sm:w-16 sm:h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4 sm:mb-6"
+              >
                 <span class="text-2xl sm:text-3xl">📸</span>
               </div>
-              <h3 class="text-lg sm:text-xl font-semibold mb-3 sm:mb-4 text-gray-800">간편한 촬영</h3>
-              <p class="text-sm sm:text-base text-gray-600 leading-relaxed">
-                스마트폰 카메라로 약품을 촬영하기만 하면 됩니다.<br class="hidden sm:inline" />
-                약사가 설계한 직관적인 인터페이스로 누구나 쉽게!
+              <h3
+                class="text-lg sm:text-xl font-semibold mb-3 sm:mb-4 text-gray-800"
+              >
+                간편한 촬영
+              </h3>
+              <p class="text-sm sm:text-base text-gray-600">
+                스마트폰으로 약품 촬영만 하면 끝
               </p>
             </div>
-            
-            <div class="feature-card bg-white p-6 sm:p-8 rounded-2xl shadow-lg text-center">
-              <div class="w-14 h-14 sm:w-16 sm:h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4 sm:mb-6">
-                <span class="text-2xl sm:text-3xl">🤖</span>
+
+            <div
+              class="feature-card bg-white p-6 sm:p-8 rounded-2xl shadow-lg text-center"
+            >
+              <div
+                class="w-14 h-14 sm:w-16 sm:h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4 sm:mb-6"
+              >
+                <span class="text-2xl sm:text-3xl">👨‍⚕️</span>
               </div>
-              <h3 class="text-lg sm:text-xl font-semibold mb-3 sm:mb-4 text-gray-800">약사 검증 AI</h3>
-              <p class="text-sm sm:text-base text-gray-600 leading-relaxed">
-                약사의 전문 지식으로 훈련된 AI가 약품을 정확하게 식별합니다.<br class="hidden sm:inline" />
-                지속적인 전문가 검증으로 신뢰도가 계속 향상됩니다.
+              <h3
+                class="text-lg sm:text-xl font-semibold mb-3 sm:mb-4 text-gray-800"
+              >
+                약사 검증 AI
+              </h3>
+              <p class="text-sm sm:text-base text-gray-600">
+                현직 약사가 직접 검증한 신뢰할 수 있는 정보
               </p>
             </div>
-            
-            <div class="feature-card bg-white p-6 sm:p-8 rounded-2xl shadow-lg text-center">
-              <div class="w-14 h-14 sm:w-16 sm:h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4 sm:mb-6">
+
+            <div
+              class="feature-card bg-white p-6 sm:p-8 rounded-2xl shadow-lg text-center"
+            >
+              <div
+                class="w-14 h-14 sm:w-16 sm:h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4 sm:mb-6"
+              >
                 <span class="text-2xl sm:text-3xl">📋</span>
               </div>
-              <h3 class="text-lg sm:text-xl font-semibold mb-3 sm:mb-4 text-gray-800">전문가급 정보</h3>
-              <p class="text-sm sm:text-base text-gray-600 leading-relaxed">
-                효능, 용법용량, 주의사항, 상호작용까지<br class="hidden sm:inline" />
-                약사 수준의 전문적이고 정확한 의약품 정보를 제공합니다.
+              <h3
+                class="text-lg sm:text-xl font-semibold mb-3 sm:mb-4 text-gray-800"
+              >
+                상세한 정보
+              </h3>
+              <p class="text-sm sm:text-base text-gray-600">
+                효능·용법·주의사항까지 전문가급 정보
               </p>
             </div>
           </div>
@@ -227,29 +282,37 @@
       <!-- How It Works Section -->
       <section id="how-it-works" class="py-20 bg-white">
         <div class="container mx-auto px-6">
-          <h2 class="text-3xl md:text-4xl font-bold text-center mb-16 text-gray-800">
+          <h2
+            class="text-3xl md:text-4xl font-bold text-center mb-16 text-gray-800"
+          >
             사용법이 이렇게 간단합니다
           </h2>
-          
+
           <div class="grid md:grid-cols-3 gap-8">
             <div class="text-center">
-              <div class="w-20 h-20 bg-gradient-to-r from-purple-500 to-blue-500 rounded-full flex items-center justify-center mx-auto mb-6">
+              <div
+                class="w-20 h-20 bg-gradient-to-r from-purple-500 to-blue-500 rounded-full flex items-center justify-center mx-auto mb-6"
+              >
                 <span class="text-white text-2xl font-bold">1</span>
               </div>
               <h3 class="text-xl font-semibold mb-4">촬영</h3>
               <p class="text-gray-600">약품을 카메라로 촬영하세요</p>
             </div>
-            
+
             <div class="text-center">
-              <div class="w-20 h-20 bg-gradient-to-r from-purple-500 to-blue-500 rounded-full flex items-center justify-center mx-auto mb-6">
+              <div
+                class="w-20 h-20 bg-gradient-to-r from-purple-500 to-blue-500 rounded-full flex items-center justify-center mx-auto mb-6"
+              >
                 <span class="text-white text-2xl font-bold">2</span>
               </div>
               <h3 class="text-xl font-semibold mb-4">분석</h3>
               <p class="text-gray-600">AI가 약품을 자동으로 식별합니다</p>
             </div>
-            
+
             <div class="text-center">
-              <div class="w-20 h-20 bg-gradient-to-r from-purple-500 to-blue-500 rounded-full flex items-center justify-center mx-auto mb-6">
+              <div
+                class="w-20 h-20 bg-gradient-to-r from-purple-500 to-blue-500 rounded-full flex items-center justify-center mx-auto mb-6"
+              >
                 <span class="text-white text-2xl font-bold">3</span>
               </div>
               <h3 class="text-xl font-semibold mb-4">확인</h3>
@@ -260,17 +323,21 @@
       </section>
 
       <!-- Feedback Section -->
-      <section id="feedback" class="py-20 bg-gradient-to-r from-blue-50 to-purple-50">
+      <section
+        id="feedback"
+        class="py-20 bg-gradient-to-r from-blue-50 to-purple-50"
+      >
         <div class="container mx-auto px-6 max-w-4xl">
           <div class="text-center mb-12">
             <h2 class="text-3xl md:text-4xl font-bold mb-4 text-gray-800">
-              여러분의 의견을 들려주세요! 💌
+              함께 만들어갈 PillSnap 💌
             </h2>
-            <p class="text-lg sm:text-xl text-gray-600 mb-6 px-4 sm:px-0">
-              더 나은 PillSnap을 만들기 위해<br class="sm:hidden" />
-              여러분의 소중한 의견이 필요합니다
+            <p class="text-lg sm:text-xl text-gray-600 mb-6">
+              출시 알림을 받거나 의견을 남겨주세요
             </p>
-            <div class="bg-yellow-100 border border-yellow-300 rounded-lg p-4 inline-block">
+            <div
+              class="bg-yellow-100 border border-yellow-300 rounded-lg p-4 inline-block"
+            >
               <p class="text-yellow-800 font-medium">
                 🎁 의견 주신 분께는 출시 시 특별 혜택을 제공해드립니다!
               </p>
@@ -278,41 +345,110 @@
           </div>
 
           <div class="bg-white rounded-2xl shadow-lg p-8">
-            <form id="feedbackForm" action="https://api.web3forms.com/submit" method="POST" class="space-y-6">
-              <input type="hidden" name="access_key" id="web3forms-key" value="">
-              <input type="hidden" name="subject" value="[PillSnap 피드백] 새로운 의견이 도착했습니다">
-              <input type="hidden" name="from_name" value="PillSnap 웹사이트">
-              <input type="hidden" name="redirect" value="https://www.pillsnap.co.kr?success=true">
+            <!-- 탭 UI -->
+            <div class="mb-6 flex justify-center">
+              <div class="inline-flex bg-gray-100 rounded-lg p-1">
+                <button
+                  type="button"
+                  id="mode-waitlist"
+                  class="tab-button px-4 py-2 rounded-md text-sm font-medium bg-white shadow"
+                >
+                  간단 알림 신청
+                </button>
+                <button
+                  type="button"
+                  id="mode-feedback"
+                  class="tab-button px-4 py-2 rounded-md text-sm font-medium text-gray-600 hover:text-gray-900"
+                >
+                  자세한 의견 남기기
+                </button>
+              </div>
+            </div>
+
+            <form
+              id="feedbackForm"
+              action="https://api.web3forms.com/submit"
+              method="POST"
+              class="space-y-6"
+            >
+              <input
+                type="hidden"
+                name="access_key"
+                id="web3forms-key"
+                value=""
+              />
+              <input
+                type="hidden"
+                name="form_mode"
+                id="form_mode"
+                value="waitlist"
+              />
+              <input
+                type="hidden"
+                name="subject"
+                id="subject-dynamic"
+                value="[PillSnap 대기자] 출시 알림 신청"
+              />
+              <input type="hidden" name="from_name" value="PillSnap 웹사이트" />
+              <input
+                type="hidden"
+                name="redirect"
+                value="https://www.pillsnap.co.kr?success=true"
+              />
+
+              <!-- 기본 정보 -->
               <div class="grid md:grid-cols-2 gap-6">
-                <div>
-                  <label for="korean-name" class="block text-sm font-medium text-gray-700 mb-2">
+                <div id="grp-name" class="form-group">
+                  <label
+                    for="korean-name"
+                    class="block text-sm font-medium text-gray-700 mb-2"
+                  >
                     이름 <span class="text-red-500">*</span>
                   </label>
-                  <input type="text" id="korean-name" name="이름" required
+                  <input
+                    type="text"
+                    id="korean-name"
+                    name="이름"
                     class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all"
-                    placeholder="김민준">
+                    placeholder="김민준"
+                  />
                 </div>
-                <div>
-                  <label for="korean-email" class="block text-sm font-medium text-gray-700 mb-2">
+                <div id="grp-email" class="form-group">
+                  <label
+                    for="korean-email"
+                    class="block text-sm font-medium text-gray-700 mb-2"
+                  >
                     이메일 <span class="text-red-500">*</span>
                   </label>
-                  <input type="email" id="korean-email" name="이메일" required
+                  <input
+                    type="email"
+                    id="korean-email"
+                    name="이메일"
+                    required
                     class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all"
                     placeholder="example@gmail.com"
                     pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
-                    title="올바른 이메일 주소를 입력해주세요 (예: user@example.com)">
+                    title="올바른 이메일 주소를 입력해주세요 (예: user@example.com)"
+                  />
                   <div class="text-sm text-red-500 hidden" id="email-error">
                     올바른 이메일 주소를 입력해주세요.
                   </div>
                 </div>
               </div>
 
-              <div>
-                <label for="korean-usertype" class="block text-sm font-medium text-gray-700 mb-2">
+              <!-- 사용자 유형 -->
+              <div id="grp-user-type" class="form-group hidden">
+                <label
+                  for="korean-usertype"
+                  class="block text-sm font-medium text-gray-700 mb-2"
+                >
                   어떤 분이신가요? <span class="text-red-500">*</span>
                 </label>
-                <select id="korean-usertype" name="사용자_유형" required
-                  class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all">
+                <select
+                  id="korean-usertype"
+                  name="사용자_유형"
+                  class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all"
+                >
                   <option value="">선택해주세요</option>
                   <option value="환자/일반인">환자/일반인</option>
                   <option value="환자 가족/보호자">환자 가족/보호자</option>
@@ -323,160 +459,319 @@
                 </select>
               </div>
 
-              <div>
+              <!-- 관심 기능 -->
+              <div id="grp-interest" class="form-group hidden">
                 <label class="block text-sm font-medium text-gray-700 mb-2">
                   가장 관심있는 기능은? <span class="text-red-500">*</span>
                 </label>
                 <div class="grid md:grid-cols-2 gap-4">
                   <label class="flex items-center space-x-3 cursor-pointer">
-                    <input type="radio" name="관심_기능" value="약품 촬영 및 식별" required class="text-purple-500">
+                    <input
+                      type="radio"
+                      name="관심_기능"
+                      value="약품 촬영 및 식별"
+                      class="text-purple-500"
+                    />
                     <span>약품 촬영 및 식별</span>
                   </label>
                   <label class="flex items-center space-x-3 cursor-pointer">
-                    <input type="radio" name="관심_기능" value="상세한 약품 정보" required class="text-purple-500">
+                    <input
+                      type="radio"
+                      name="관심_기능"
+                      value="상세한 약품 정보"
+                      class="text-purple-500"
+                    />
                     <span>상세한 약품 정보</span>
                   </label>
                   <label class="flex items-center space-x-3 cursor-pointer">
-                    <input type="radio" name="관심_기능" value="약물 상호작용 체크" required class="text-purple-500">
+                    <input
+                      type="radio"
+                      name="관심_기능"
+                      value="약물 상호작용 체크"
+                      class="text-purple-500"
+                    />
                     <span>약물 상호작용 체크</span>
                   </label>
                   <label class="flex items-center space-x-3 cursor-pointer">
-                    <input type="radio" name="관심_기능" value="복용 알림 기능" required class="text-purple-500">
+                    <input
+                      type="radio"
+                      name="관심_기능"
+                      value="복용 알림 기능"
+                      class="text-purple-500"
+                    />
                     <span>복용 알림 기능</span>
                   </label>
                   <label class="flex items-center space-x-3 cursor-pointer">
-                    <input type="radio" name="관심_기능" value="복용 기록 관리" required class="text-purple-500">
+                    <input
+                      type="radio"
+                      name="관심_기능"
+                      value="복용 기록 관리"
+                      class="text-purple-500"
+                    />
                     <span>복용 기록 관리</span>
                   </label>
                   <label class="flex items-center space-x-3 cursor-pointer">
-                    <input type="radio" name="관심_기능" value="기타" required class="text-purple-500" onchange="toggleOtherInput('interest-other', this)">
+                    <input
+                      type="radio"
+                      name="관심_기능"
+                      value="기타"
+                      class="text-purple-500"
+                      onchange="toggleOtherInput('interest-other', this)"
+                    />
                     <span>기타</span>
                   </label>
                 </div>
                 <div id="interest-other" class="mt-3 hidden">
-                  <textarea name="기타_관심사항" rows="2" 
+                  <textarea
+                    name="기타_관심사항"
+                    rows="2"
                     class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all"
-                    placeholder="관심있는 기능을 구체적으로 알려주세요..."></textarea>
+                    placeholder="관심있는 기능을 구체적으로 알려주세요..."
+                  ></textarea>
                 </div>
               </div>
 
-              <div>
+              <!-- 제안사항 -->
+              <div id="grp-suggestions" class="form-group hidden">
                 <label class="block text-sm font-medium text-gray-700 mb-2">
-                  PillSnap에서 꼭 필요하다고 생각하는 기능은? <span class="text-gray-400">(복수 선택 가능)</span>
+                  PillSnap에서 꼭 필요하다고 생각하는 기능은?
+                  <span class="text-gray-400">(복수 선택 가능)</span>
                 </label>
                 <div class="grid md:grid-cols-2 gap-3">
                   <label class="flex items-center space-x-3 cursor-pointer">
-                    <input type="checkbox" name="제안사항" value="약물 상호작용 체크" class="text-purple-500 focus:ring-purple-500">
+                    <input
+                      type="checkbox"
+                      name="제안사항"
+                      value="약물 상호작용 체크"
+                      class="text-purple-500 focus:ring-purple-500"
+                    />
                     <span>약물 상호작용 체크</span>
                   </label>
                   <label class="flex items-center space-x-3 cursor-pointer">
-                    <input type="checkbox" name="제안사항" value="복용 알림 기능" class="text-purple-500 focus:ring-purple-500">
+                    <input
+                      type="checkbox"
+                      name="제안사항"
+                      value="복용 알림 기능"
+                      class="text-purple-500 focus:ring-purple-500"
+                    />
                     <span>복용 알림 기능</span>
                   </label>
                   <label class="flex items-center space-x-3 cursor-pointer">
-                    <input type="checkbox" name="제안사항" value="약품 보관법 안내" class="text-purple-500 focus:ring-purple-500">
+                    <input
+                      type="checkbox"
+                      name="제안사항"
+                      value="약품 보관법 안내"
+                      class="text-purple-500 focus:ring-purple-500"
+                    />
                     <span>약품 보관법 안내</span>
                   </label>
                   <label class="flex items-center space-x-3 cursor-pointer">
-                    <input type="checkbox" name="제안사항" value="부작용 정보 제공" class="text-purple-500 focus:ring-purple-500">
+                    <input
+                      type="checkbox"
+                      name="제안사항"
+                      value="부작용 정보 제공"
+                      class="text-purple-500 focus:ring-purple-500"
+                    />
                     <span>부작용 정보 제공</span>
                   </label>
                   <label class="flex items-center space-x-3 cursor-pointer">
-                    <input type="checkbox" name="제안사항" value="약품명 검색 기능" class="text-purple-500 focus:ring-purple-500">
+                    <input
+                      type="checkbox"
+                      name="제안사항"
+                      value="약품명 검색 기능"
+                      class="text-purple-500 focus:ring-purple-500"
+                    />
                     <span>약품명 검색 기능</span>
                   </label>
                   <label class="flex items-center space-x-3 cursor-pointer">
-                    <input type="checkbox" name="제안사항" value="복용 기록 관리" class="text-purple-500 focus:ring-purple-500">
+                    <input
+                      type="checkbox"
+                      name="제안사항"
+                      value="복용 기록 관리"
+                      class="text-purple-500 focus:ring-purple-500"
+                    />
                     <span>복용 기록 관리</span>
                   </label>
                   <label class="flex items-center space-x-3 cursor-pointer">
-                    <input type="checkbox" name="제안사항" value="주변 약국 찾기" class="text-purple-500 focus:ring-purple-500">
+                    <input
+                      type="checkbox"
+                      name="제안사항"
+                      value="주변 약국 찾기"
+                      class="text-purple-500 focus:ring-purple-500"
+                    />
                     <span>주변 약국 찾기</span>
                   </label>
                   <label class="flex items-center space-x-3 cursor-pointer">
-                    <input type="checkbox" name="제안사항" value="복용량 계산기" class="text-purple-500 focus:ring-purple-500">
+                    <input
+                      type="checkbox"
+                      name="제안사항"
+                      value="복용량 계산기"
+                      class="text-purple-500 focus:ring-purple-500"
+                    />
                     <span>복용량 계산기</span>
                   </label>
                   <label class="flex items-center space-x-3 cursor-pointer">
-                    <input type="checkbox" name="제안사항" value="기타" class="text-purple-500 focus:ring-purple-500" onchange="toggleOtherInput('suggestions-other', this)">
+                    <input
+                      type="checkbox"
+                      name="제안사항"
+                      value="기타"
+                      class="text-purple-500 focus:ring-purple-500"
+                      onchange="toggleOtherInput('suggestions-other', this)"
+                    />
                     <span>기타</span>
                   </label>
                 </div>
                 <div id="suggestions-other" class="mt-3 hidden">
-                  <textarea name="기타_제안사항" rows="3" 
+                  <textarea
+                    name="기타_제안사항"
+                    rows="3"
                     class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all"
-                    placeholder="필요한 기능을 구체적으로 알려주세요..."></textarea>
+                    placeholder="필요한 기능을 구체적으로 알려주세요..."
+                  ></textarea>
                 </div>
               </div>
 
-              <div>
+              <!-- 우려사항 -->
+              <div id="grp-concerns" class="form-group hidden">
                 <label class="block text-sm font-medium text-gray-700 mb-2">
-                  약품 정보 앱 사용 시 우려되는 점은? <span class="text-gray-400">(복수 선택 가능)</span>
+                  약품 정보 앱 사용 시 우려되는 점은?
+                  <span class="text-gray-400">(복수 선택 가능)</span>
                 </label>
                 <div class="grid md:grid-cols-2 gap-3">
                   <label class="flex items-center space-x-3 cursor-pointer">
-                    <input type="checkbox" name="우려사항" value="정보의 정확성" class="text-purple-500 focus:ring-purple-500">
+                    <input
+                      type="checkbox"
+                      name="우려사항"
+                      value="정보의 정확성"
+                      class="text-purple-500 focus:ring-purple-500"
+                    />
                     <span>정보의 정확성</span>
                   </label>
                   <label class="flex items-center space-x-3 cursor-pointer">
-                    <input type="checkbox" name="우려사항" value="개인정보 보안" class="text-purple-500 focus:ring-purple-500">
+                    <input
+                      type="checkbox"
+                      name="우려사항"
+                      value="개인정보 보안"
+                      class="text-purple-500 focus:ring-purple-500"
+                    />
                     <span>개인정보 보안</span>
                   </label>
                   <label class="flex items-center space-x-3 cursor-pointer">
-                    <input type="checkbox" name="우려사항" value="약품 오인식 가능성" class="text-purple-500 focus:ring-purple-500">
+                    <input
+                      type="checkbox"
+                      name="우려사항"
+                      value="약품 오인식 가능성"
+                      class="text-purple-500 focus:ring-purple-500"
+                    />
                     <span>약품 오인식 가능성</span>
                   </label>
                   <label class="flex items-center space-x-3 cursor-pointer">
-                    <input type="checkbox" name="우려사항" value="사용 편의성" class="text-purple-500 focus:ring-purple-500">
+                    <input
+                      type="checkbox"
+                      name="우려사항"
+                      value="사용 편의성"
+                      class="text-purple-500 focus:ring-purple-500"
+                    />
                     <span>사용 편의성</span>
                   </label>
                   <label class="flex items-center space-x-3 cursor-pointer">
-                    <input type="checkbox" name="우려사항" value="인터넷 연결 필요" class="text-purple-500 focus:ring-purple-500">
+                    <input
+                      type="checkbox"
+                      name="우려사항"
+                      value="인터넷 연결 필요"
+                      class="text-purple-500 focus:ring-purple-500"
+                    />
                     <span>인터넷 연결 필요</span>
                   </label>
                   <label class="flex items-center space-x-3 cursor-pointer">
-                    <input type="checkbox" name="우려사항" value="배터리 소모" class="text-purple-500 focus:ring-purple-500">
+                    <input
+                      type="checkbox"
+                      name="우려사항"
+                      value="배터리 소모"
+                      class="text-purple-500 focus:ring-purple-500"
+                    />
                     <span>배터리 소모</span>
                   </label>
                   <label class="flex items-center space-x-3 cursor-pointer">
-                    <input type="checkbox" name="우려사항" value="데이터 사용량" class="text-purple-500 focus:ring-purple-500">
+                    <input
+                      type="checkbox"
+                      name="우려사항"
+                      value="데이터 사용량"
+                      class="text-purple-500 focus:ring-purple-500"
+                    />
                     <span>데이터 사용량</span>
                   </label>
                   <label class="flex items-center space-x-3 cursor-pointer">
-                    <input type="checkbox" name="우려사항" value="이용 비용" class="text-purple-500 focus:ring-purple-500">
+                    <input
+                      type="checkbox"
+                      name="우려사항"
+                      value="이용 비용"
+                      class="text-purple-500 focus:ring-purple-500"
+                    />
                     <span>이용 비용</span>
                   </label>
                   <label class="flex items-center space-x-3 cursor-pointer">
-                    <input type="checkbox" name="우려사항" value="기타" class="text-purple-500 focus:ring-purple-500" onchange="toggleOtherInput('concerns-other', this)">
+                    <input
+                      type="checkbox"
+                      name="우려사항"
+                      value="기타"
+                      class="text-purple-500 focus:ring-purple-500"
+                      onchange="toggleOtherInput('concerns-other', this)"
+                    />
                     <span>기타</span>
                   </label>
                 </div>
                 <div id="concerns-other" class="mt-3 hidden">
-                  <textarea name="기타_우려사항" rows="3" 
+                  <textarea
+                    name="기타_우려사항"
+                    rows="3"
                     class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all"
-                    placeholder="우려사항을 구체적으로 알려주세요..."></textarea>
+                    placeholder="우려사항을 구체적으로 알려주세요..."
+                  ></textarea>
                 </div>
               </div>
 
-              <div class="flex items-start space-x-3">
-                <input type="checkbox" id="newsletter" name="뉴스레터_구독" 
-                  class="mt-1 text-purple-500 focus:ring-purple-500">
-                <label for="newsletter" class="text-sm text-gray-600">
-                  PillSnap 출시 소식 및 건강 정보를 이메일로 받아보고 싶습니다 (선택사항)
-                </label>
+              <!-- 뉴스레터 구독 -->
+              <div id="grp-newsletter" class="form-group">
+                <div class="flex items-start space-x-3">
+                  <input
+                    type="checkbox"
+                    id="newsletter"
+                    name="뉴스레터_구독"
+                    class="mt-1 text-purple-500 focus:ring-purple-500"
+                    checked
+                  />
+                  <label for="newsletter" class="text-sm text-gray-600">
+                    <span id="newsletter-text"
+                      >PillSnap 출시 소식 및 건강 정보를 이메일로 받아보고
+                      싶습니다</span
+                    >
+                  </label>
+                </div>
               </div>
 
               <div class="text-center pt-4">
-                <button type="submit" 
-                  class="inline-flex items-center bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-4 rounded-xl font-semibold hover:from-purple-700 hover:to-blue-700 transform hover:scale-105 transition-all duration-200 shadow-lg">
-                  <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20">
-                    <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"/>
-                    <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"/>
+                <button
+                  type="submit"
+                  id="submit-btn"
+                  class="inline-flex items-center bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-4 rounded-xl font-semibold hover:from-purple-700 hover:to-blue-700 transform hover:scale-105 transition-all duration-200 shadow-lg"
+                >
+                  <svg
+                    class="w-5 h-5 mr-2"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                  >
+                    <path
+                      d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"
+                    />
+                    <path
+                      d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"
+                    />
                   </svg>
-                  의견 보내기
+                  <span id="submit-text">알림 신청하기</span>
                 </button>
-                <p class="text-sm text-gray-500 mt-4">
-                  소중한 의견 감사합니다! 더 나은 PillSnap을 만드는데 활용하겠습니다.
+                <p class="text-sm text-gray-500 mt-4" id="form-description">
+                  출시 소식을 가장 먼저 받아보세요!
                 </p>
               </div>
             </form>
@@ -487,29 +782,36 @@
       <!-- CTA Section -->
       <section class="py-20 gradient-bg text-white">
         <div class="container mx-auto px-6 text-center">
-          <h2 class="text-3xl md:text-4xl font-bold mb-6">
-            곧 만나요! 🚀
-          </h2>
+          <h2 class="text-3xl md:text-4xl font-bold mb-6">곧 만나요! 🚀</h2>
           <p class="text-xl mb-8 text-purple-100">
             더 안전하고 편리한 의약품 사용을 위한 여정이 곧 시작됩니다
           </p>
           <div class="flex justify-center space-x-6">
             <div class="text-center">
-              <div class="bg-white/20 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-3">
+              <div
+                class="bg-white/20 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-3"
+                loading="lazy"
+              >
                 <span class="text-2xl">📱</span>
               </div>
               <p class="text-sm">Android & iOS</p>
               <p class="text-yellow-300 font-semibold">출시 예정</p>
             </div>
             <div class="text-center">
-              <div class="bg-white/20 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-3">
+              <div
+                class="bg-white/20 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-3"
+                loading="lazy"
+              >
                 <span class="text-2xl">🆓</span>
               </div>
               <p class="text-sm">무료 다운로드</p>
               <p class="text-yellow-300 font-semibold">평생 무료</p>
             </div>
             <div class="text-center">
-              <div class="bg-white/20 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-3">
+              <div
+                class="bg-white/20 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-3"
+                loading="lazy"
+              >
                 <span class="text-2xl">👨‍⚕️</span>
               </div>
               <p class="text-sm">약사가 개발</p>
@@ -525,21 +827,39 @@
       <div class="container mx-auto px-6">
         <div class="flex flex-col md:flex-row justify-between items-center">
           <div class="flex items-center space-x-2 mb-6 md:mb-0">
-            <img src="/assets/images/icon-64.png" alt="PillSnap" class="w-8 h-8 rounded-lg">
+            <img
+              src="/assets/images/icon-64.png"
+              alt="PillSnap"
+              class="w-8 h-8 rounded-lg"
+              loading="lazy"
+            />
             <span class="text-xl font-bold text-white">PillSnap</span>
           </div>
-          
-          <div class="flex flex-col md:flex-row items-center space-y-4 md:space-y-0 md:space-x-8">
-            <a href="/privacy.html" class="hover:text-white transition-colors">개인정보처리방침</a>
-            <a href="/terms.html" class="hover:text-white transition-colors">이용약관</a>
-            <a href="mailto:contact@pillsnap.co.kr" class="hover:text-white transition-colors">문의하기</a>
+
+          <div
+            class="flex flex-col md:flex-row items-center space-y-4 md:space-y-0 md:space-x-8"
+          >
+            <a href="/privacy.html" class="hover:text-white transition-colors"
+              >개인정보처리방침</a
+            >
+            <a href="/terms.html" class="hover:text-white transition-colors"
+              >이용약관</a
+            >
+            <a
+              href="mailto:contact@pillsnap.co.kr"
+              class="hover:text-white transition-colors"
+              >문의하기</a
+            >
           </div>
         </div>
-        
+
         <div class="border-t border-gray-700 mt-8 pt-8 text-center text-sm">
           <p>&copy; 2025 PillSnap. All rights reserved.</p>
-          <p class="mt-4 text-yellow-300 bg-gray-800 rounded-lg p-4 max-w-3xl mx-auto">
-            ⚠️ <strong>중요:</strong> PillSnap은 의약품 정보 제공 서비스로, 의료 진단이나 상담을 대체할 수 없습니다.<br>
+          <p
+            class="mt-4 text-yellow-300 bg-gray-800 rounded-lg p-4 max-w-3xl mx-auto"
+          >
+            ⚠️ <strong>중요:</strong> PillSnap은 의약품 정보 제공 서비스로, 의료
+            진단이나 상담을 대체할 수 없습니다.<br />
             복용 전 반드시 의사 또는 약사와 상담하시기 바랍니다.
           </p>
           <p class="mt-3 text-xs text-gray-500">
@@ -550,39 +870,184 @@
     </footer>
 
     <!-- Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-SXSQE2VPBJ"
+    ></script>
     <script>
       window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'GA_MEASUREMENT_ID');
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "G-SXSQE2VPBJ");
     </script>
 
     <!-- Configuration -->
-    <script src="/assets/js/config.js?v=2025081314"></script>
+    <script src="/assets/js/config.js?v=2025081315"></script>
 
     <!-- Cloudflare Web Analytics -->
-    <script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "CF_BEACON_TOKEN"}'></script>
-    
+    <script
+      defer
+      src="https://static.cloudflareinsights.com/beacon.min.js"
+      data-cf-beacon='{"token": "f2e677b8e6504abfb3d0e09aca1e6398"}'
+    ></script>
+
     <!-- Feedback Form Script -->
     <script>
       // Set Web3Forms access key - direct injection during build
-      document.addEventListener('DOMContentLoaded', function() {
-        const keyInput = document.getElementById('web3forms-key');
+      document.addEventListener("DOMContentLoaded", function () {
+        const keyInput = document.getElementById("web3forms-key");
         if (keyInput) {
-          keyInput.value = 'f6faf7e3-fa62-4ff3-b7d8-1b31df67831b';
+          keyInput.value = "f6faf7e3-fa62-4ff3-b7d8-1b31df67831b";
         }
+
+        // 탭 버튼 초기화
+        const waitlistBtn = document.getElementById("mode-waitlist");
+        const feedbackBtn = document.getElementById("mode-feedback");
+
+        // 로컬스토리지에서 모드 로드
+        const savedMode =
+          localStorage.getItem("pillsnap-form-mode") || "waitlist";
+        setMode(savedMode);
+
+        // 탭 버튼 이벤트
+        waitlistBtn.addEventListener("click", () => setMode("waitlist"));
+        feedbackBtn.addEventListener("click", () => setMode("feedback"));
       });
+
+      // 폼 모드 설정 함수
+      function setMode(mode) {
+        const waitlistBtn = document.getElementById("mode-waitlist");
+        const feedbackBtn = document.getElementById("mode-feedback");
+        const formMode = document.getElementById("form_mode");
+        const subject = document.getElementById("subject-dynamic");
+        const submitText = document.getElementById("submit-text");
+        const formDescription = document.getElementById("form-description");
+
+        // 탭 버튼 스타일
+        if (mode === "waitlist") {
+          waitlistBtn.classList.add("active", "bg-white", "shadow");
+          waitlistBtn.classList.remove("text-gray-600");
+          feedbackBtn.classList.remove("active", "bg-white", "shadow");
+          feedbackBtn.classList.add("text-gray-600");
+        } else {
+          feedbackBtn.classList.add("active", "bg-white", "shadow");
+          feedbackBtn.classList.remove("text-gray-600");
+          waitlistBtn.classList.remove("active", "bg-white", "shadow");
+          waitlistBtn.classList.add("text-gray-600");
+        }
+
+        // 폼 필드 제어
+        formMode.value = mode;
+
+        if (mode === "waitlist") {
+          // 간단 알림 신청 모드
+          subject.value = "[PillSnap 대기자] 출시 알림 신청";
+          submitText.textContent = "알림 신청하기";
+          formDescription.textContent = "출시 소식을 가장 먼저 받아보세요!";
+
+          // 이름과 이메일 모두 필수
+          setRequired("korean-name", true);
+          setRequired("korean-email", true);
+
+          // 뉴스레터 기본 체크 및 텍스트 변경
+          const newsletter = document.getElementById("newsletter");
+          const newsletterOptional = document.getElementById(
+            "newsletter-optional"
+          );
+          if (newsletter) {
+            newsletter.checked = true;
+          }
+          if (newsletterOptional) {
+            newsletterOptional.style.display = "none";
+          }
+
+          // 상세 필드들 숨기기
+          toggleGroup("grp-user-type", false);
+          toggleGroup("grp-interest", false);
+          toggleGroup("grp-suggestions", false);
+          toggleGroup("grp-concerns", false);
+        } else {
+          // 자세한 의견 모드
+          subject.value = "[PillSnap 피드백] 새로운 의견이 도착했습니다";
+          submitText.textContent = "의견 보내기";
+          formDescription.textContent =
+            "소중한 의견 감사합니다! 더 나은 PillSnap을 만드는데 활용하겠습니다.";
+
+          // 모든 기본 필드 필수
+          setRequired("korean-name", true);
+          setRequired("korean-email", true);
+
+          // 뉴스레터 기본 해제 및 텍스트 복원
+          const newsletter = document.getElementById("newsletter");
+          const newsletterOptional = document.getElementById(
+            "newsletter-optional"
+          );
+          if (newsletter) {
+            newsletter.checked = true;
+          }
+          if (newsletterOptional) {
+            newsletterOptional.style.display = "inline";
+          }
+
+          // 상세 필드들 보이기
+          toggleGroup("grp-user-type", true);
+          toggleGroup("grp-interest", true);
+          toggleGroup("grp-suggestions", true);
+          toggleGroup("grp-concerns", true);
+
+          // 상세 필드들 필수 설정
+          setRequired("korean-usertype", true);
+          const interestRadios = document.querySelectorAll(
+            'input[name="관심_기능"]'
+          );
+          interestRadios.forEach((radio) => (radio.required = true));
+        }
+
+        // 로컬스토리지에 모드 저장
+        localStorage.setItem("pillsnap-form-mode", mode);
+      }
+
+      // 필수 여부 설정
+      function setRequired(elementId, required) {
+        const element = document.getElementById(elementId);
+        if (element) {
+          element.required = required;
+        }
+      }
+
+      // 그룹 표시/숨김
+      function toggleGroup(groupId, show) {
+        const group = document.getElementById(groupId);
+        if (group) {
+          if (show) {
+            group.classList.remove("hidden");
+          } else {
+            group.classList.add("hidden");
+            // 숨겨지는 필드들 필수 해제
+            const inputs = group.querySelectorAll("input, select, textarea");
+            inputs.forEach((input) => {
+              input.required = false;
+              if (input.type === "radio" || input.type === "checkbox") {
+                input.checked = false;
+              } else {
+                input.value = "";
+              }
+            });
+          }
+        }
+      }
 
       // 기타 선택 시 textarea 토글 함수
       function toggleOtherInput(targetId, checkbox) {
         const target = document.getElementById(targetId);
         if (checkbox.checked) {
-          target.classList.remove('hidden');
-          target.querySelector('textarea').focus();
+          target.classList.remove("hidden");
+          target.querySelector("textarea").focus();
         } else {
-          target.classList.add('hidden');
-          target.querySelector('textarea').value = '';
+          target.classList.add("hidden");
+          target.querySelector("textarea").value = "";
         }
       }
 
@@ -592,127 +1057,128 @@
         return re.test(email);
       }
 
-      // =============================================================================
-      // PillSnap 웹사이트 - 포괄적인 Google Analytics 이벤트 추적 코드
-      // =============================================================================
-
-      // 6. 트래픽 소스 감지 함수
+      // 트래픽 소스 감지 함수
       function getTrafficSource() {
         const referrer = document.referrer;
-        const utm_source = new URLSearchParams(window.location.search).get('utm_source');
-        
+        const utm_source = new URLSearchParams(window.location.search).get(
+          "utm_source"
+        );
+
         if (utm_source) {
           return utm_source;
-        } else if (referrer.includes('google.')) {
-          return 'google_search';
-        } else if (referrer.includes('naver.')) {
-          return 'naver_search';
-        } else if (referrer.includes('facebook.') || referrer.includes('instagram.')) {
-          return 'social_media';
-        } else if (referrer === '') {
-          return 'direct';
+        } else if (referrer.includes("google.")) {
+          return "google_search";
+        } else if (referrer.includes("naver.")) {
+          return "naver_search";
+        } else if (
+          referrer.includes("facebook.") ||
+          referrer.includes("instagram.")
+        ) {
+          return "social_media";
+        } else if (referrer === "") {
+          return "direct";
         } else {
-          return 'other_referral';
+          return "other_referral";
         }
       }
 
-      // 1. 기존 피드백 폼 제출 이벤트
-      document.getElementById('feedbackForm').addEventListener('submit', function(e) {
-        // Google Analytics 이벤트 전송
-        if (typeof gtag !== 'undefined') {
-          // 이메일 수집 이벤트
-          gtag('event', 'email_signup', {
-            'event_category': 'Lead Generation',
-            'event_label': 'Feedback Form Email',
-            'source': getTrafficSource()
-          });
+      // 폼 제출 이벤트
+      document
+        .getElementById("feedbackForm")
+        .addEventListener("submit", function (e) {
+          const mode = document.getElementById("form_mode").value;
 
-          // 피드백/기능 요청 이벤트  
-          gtag('event', 'feature_request', {
-            'event_category': 'User Feedback',
-            'event_label': 'Feature Request Form',
-            'source': getTrafficSource()
-          });
+          // Google Analytics 이벤트 전송 (모드별)
+          if (typeof gtag !== "undefined") {
+            if (mode === "waitlist") {
+              gtag("event", "waitlist_signup", {
+                event_category: "Lead Generation",
+                event_label: "Waitlist Signup",
+                source: getTrafficSource(),
+              });
+            } else {
+              gtag("event", "feature_request", {
+                event_category: "User Feedback",
+                event_label: "Feature Request Form",
+                source: getTrafficSource(),
+              });
+            }
 
-          // 기존 generate_lead 이벤트
-          gtag('event', 'generate_lead', {
-            'feedback_submit': 'feedback_submit',
-            'page_location': window.location.href
-          });
-        }
+            // 이메일 수집 이벤트
+            gtag("event", "email_signup", {
+              event_category: "Lead Generation",
+              event_label:
+                mode === "waitlist" ? "Waitlist Email" : "Feedback Form Email",
+              source: getTrafficSource(),
+            });
+          }
 
-        // 기존 이메일 검증 코드
-        const emailInput = document.getElementById('korean-email');
-        const emailError = document.getElementById('email-error');
-        
-        if (!validateEmail(emailInput.value)) {
-          e.preventDefault();
-          emailError.classList.remove('hidden');
-          emailInput.focus();
-          emailInput.classList.add('border-red-500');
-          return false;
-        } else {
-          emailError.classList.add('hidden');
-          emailInput.classList.remove('border-red-500');
-        }
-        
-        // 제출 버튼 상태 변경
-        const submitBtn = document.querySelector('button[type="submit"]');
-        const originalText = submitBtn.innerHTML;
-        
-        submitBtn.innerHTML = `
+          // 이메일 검증
+          const emailInput = document.getElementById("korean-email");
+          const emailError = document.getElementById("email-error");
+
+          if (!validateEmail(emailInput.value)) {
+            e.preventDefault();
+            emailError.classList.remove("hidden");
+            emailInput.focus();
+            emailInput.classList.add("border-red-500");
+            return false;
+          } else {
+            emailError.classList.add("hidden");
+            emailInput.classList.remove("border-red-500");
+          }
+
+          // 제출 버튼 상태 변경
+          const submitBtn = document.getElementById("submit-btn");
+          const submitText = document.getElementById("submit-text");
+
+          submitBtn.innerHTML = `
           <svg class="w-5 h-5 mr-2 animate-spin" fill="currentColor" viewBox="0 0 20 20">
             <path d="M11 17a1 1 0 001.447.894l4-2A1 1 0 0017 15V9.236a1 1 0 00-1.447-.894l-4 2a1 1 0 00-.553.894V17zM15.211 6.276a1 1 0 000-1.788l-4.764-2.382a1 1 0 00-.894 0L4.789 4.488a1 1 0 000 1.788l4.764 2.382a1 1 0 00.894 0l4.764-2.382zM4.447 8.342A1 1 0 003 9.236V15a1 1 0 00.553.894l4 2A1 1 0 009 17v-5.764a1 1 0 00-.553-.894l-4-2z"/>
           </svg>
           전송 중...
         `;
-        submitBtn.disabled = true;
-        submitBtn.className = submitBtn.className.replace('from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700', 'from-gray-500 to-gray-600');
-      });
+          submitBtn.disabled = true;
+          submitBtn.className = submitBtn.className.replace(
+            "from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700",
+            "from-gray-500 to-gray-600"
+          );
 
-      // 2. 다운로드 버튼 관심 표시 추적
-      document.querySelectorAll('.download-btn').forEach(btn => {
-        btn.addEventListener('click', function() {
-          if (typeof gtag !== 'undefined') {
-            gtag('event', 'download_click', {
-              'event_category': 'User Interest',
-              'event_label': this.textContent.includes('App Store') ? 'iOS Interest' : 'Android Interest',
-              'source': getTrafficSource()
+          // 모드 저장 (제출 시)
+          localStorage.setItem("pillsnap-form-mode", mode);
+        });
+
+      // CTA 버튼 클릭 추적
+      document.querySelectorAll('a[href="#feedback"]').forEach((btn) => {
+        btn.addEventListener("click", function () {
+          if (typeof gtag !== "undefined") {
+            gtag("event", "feedback_cta_click", {
+              event_category: "Navigation",
+              event_label: this.textContent.includes("Hero")
+                ? "Hero CTA Button"
+                : "Nav CTA Button",
+              source: getTrafficSource(),
             });
           }
         });
       });
 
-      // 3. 의견 보내기 CTA 버튼 클릭
-      const feedbackCTA = document.querySelector('a[href="#feedback"]');
-      if (feedbackCTA) {
-        feedbackCTA.addEventListener('click', function() {
-          if (typeof gtag !== 'undefined') {
-            gtag('event', 'feedback_cta_click', {
-              'event_category': 'Navigation',
-              'event_label': 'Hero CTA Button',
-              'source': getTrafficSource()
-            });
-          }
-        });
-      }
-
-      // 4. 섹션별 스크롤 추적 (사용자 관심도 측정)
+      // 섹션별 스크롤 추적
       let sectionsViewed = new Set();
       function trackSectionViews() {
-        const sections = ['features', 'how-it-works', 'feedback'];
-        
-        sections.forEach(sectionId => {
+        const sections = ["features", "how-it-works", "feedback"];
+
+        sections.forEach((sectionId) => {
           const section = document.getElementById(sectionId);
           if (section && !sectionsViewed.has(sectionId)) {
             const rect = section.getBoundingClientRect();
             if (rect.top < window.innerHeight && rect.bottom > 0) {
               sectionsViewed.add(sectionId);
-              if (typeof gtag !== 'undefined') {
-                gtag('event', 'section_view', {
-                  'event_category': 'Engagement',
-                  'event_label': sectionId,
-                  'source': getTrafficSource()
+              if (typeof gtag !== "undefined") {
+                gtag("event", "section_view", {
+                  event_category: "Engagement",
+                  event_label: sectionId,
+                  source: getTrafficSource(),
                 });
               }
             }
@@ -720,84 +1186,91 @@
         });
       }
 
-      window.addEventListener('scroll', trackSectionViews);
+      window.addEventListener("scroll", trackSectionViews);
 
-      // 5. 페이지 체류 시간 추적
+      // 페이지 체류 시간 추적
       let startTime = Date.now();
       let timeTracked = false;
 
-      window.addEventListener('beforeunload', function() {
-        if (!timeTracked && typeof gtag !== 'undefined') {
+      window.addEventListener("beforeunload", function () {
+        if (!timeTracked && typeof gtag !== "undefined") {
           const timeSpent = Math.round((Date.now() - startTime) / 1000);
-          if (timeSpent > 30) { // 30초 이상 체류한 경우만
-            gtag('event', 'engagement_time', {
-              'event_category': 'Engagement',
-              'event_label': 'Time on Page',
-              'value': timeSpent,
-              'source': getTrafficSource()
+          if (timeSpent > 30) {
+            gtag("event", "engagement_time", {
+              event_category: "Engagement",
+              event_label: "Time on Page",
+              value: timeSpent,
+              source: getTrafficSource(),
             });
           }
           timeTracked = true;
         }
       });
 
-      // 7. 뉴스레터 구독 별도 추적
-      const newsletter = document.getElementById('newsletter');
+      // 뉴스레터 구독 추적
+      const newsletter = document.getElementById("newsletter");
       if (newsletter) {
-        newsletter.addEventListener('change', function() {
-          if (this.checked && typeof gtag !== 'undefined') {
-            gtag('event', 'newsletter_signup', {
-              'event_category': 'Lead Generation',
-              'event_label': 'Newsletter Subscription',
-              'source': getTrafficSource()
+        newsletter.addEventListener("change", function () {
+          if (this.checked && typeof gtag !== "undefined") {
+            gtag("event", "newsletter_signup", {
+              event_category: "Lead Generation",
+              event_label: "Newsletter Subscription",
+              source: getTrafficSource(),
             });
           }
         });
       }
 
-      // 8. 페이지 로드 완료 이벤트
-      window.addEventListener('load', function() {
-        if (typeof gtag !== 'undefined') {
-          gtag('event', 'page_loaded', {
-            'event_category': 'Page Performance',
-            'event_label': 'Homepage',
-            'source': getTrafficSource()
-          });
-        }
-      });
-
       // 실시간 이메일 검증
-      document.getElementById('korean-email').addEventListener('input', function(e) {
-        const emailInput = e.target;
-        const emailError = document.getElementById('email-error');
-        
-        if (emailInput.value.length > 0 && !validateEmail(emailInput.value)) {
-          emailError.classList.remove('hidden');
-          emailInput.classList.add('border-red-500');
-        } else {
-          emailError.classList.add('hidden');
-          emailInput.classList.remove('border-red-500');
-        }
-      });
+      document
+        .getElementById("korean-email")
+        .addEventListener("input", function (e) {
+          const emailInput = e.target;
+          const emailError = document.getElementById("email-error");
 
-      // 폼 제출 성공 시 처리 (Web3Forms 리다이렉트 후)
-      if (window.location.search.includes('success=true')) {
-        alert('✅ 소중한 의견 감사합니다! 더 나은 PillSnap을 만드는데 활용하겠습니다.');
+          if (emailInput.value.length > 0 && !validateEmail(emailInput.value)) {
+            emailError.classList.remove("hidden");
+            emailInput.classList.add("border-red-500");
+          } else {
+            emailError.classList.add("hidden");
+            emailInput.classList.remove("border-red-500");
+          }
+        });
+
+      // 폼 제출 성공 시 처리 (모드별 알림)
+      if (window.location.search.includes("success=true")) {
+        const savedMode =
+          localStorage.getItem("pillsnap-form-mode") || "waitlist";
+        let message = "";
+
+        if (savedMode === "waitlist") {
+          message =
+            "✅ 대기자 등록 완료!\n\nPillSnap 출시 소식을 가장 먼저 알려드리겠습니다.\n대기자 전용 혜택도 기대하세요!";
+        } else {
+          message =
+            "✅ 귀중한 의견 감사합니다!\n\n더 나은 PillSnap을 만드는데\n소중히 활용하겠습니다.";
+        }
+
+        alert(message);
         // URL에서 success 파라미터 제거
-        window.history.replaceState({}, document.title, window.location.pathname);
+        window.history.replaceState(
+          {},
+          document.title,
+          window.location.pathname
+        );
       }
     </script>
 
     <!-- Smooth Scroll Script -->
     <script>
-      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function (e) {
+      document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+        anchor.addEventListener("click", function (e) {
           e.preventDefault();
-          const target = document.querySelector(this.getAttribute('href'));
+          const target = document.querySelector(this.getAttribute("href"));
           if (target) {
             target.scrollIntoView({
-              behavior: 'smooth',
-              block: 'start'
+              behavior: "smooth",
+              block: "start",
             });
           }
         });
