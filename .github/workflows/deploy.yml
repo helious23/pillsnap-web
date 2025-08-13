@@ -44,7 +44,7 @@ jobs:
           # Process HTML files - replace all placeholders safely
           sed -i "s/GA_MEASUREMENT_ID/${{ secrets.GA_MEASUREMENT_ID }}/g" *.html
           sed -i "s/CF_BEACON_TOKEN/${{ secrets.CF_BEACON_TOKEN }}/g" *.html
-          sed -i "s/WEB3FORMS_ACCESS_KEY_PLACEHOLDER/${{ secrets.WEB3FORMS_ACCESS_KEY }}/g" *.html
+          sed -i "s/WEB3FORMS_KEY_PLACEHOLDER/${{ secrets.WEB3FORMS_ACCESS_KEY }}/g" *.html
           
           echo "✅ Build complete with secrets applied!"
 
