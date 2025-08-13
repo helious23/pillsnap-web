@@ -559,20 +559,18 @@
     </script>
 
     <!-- Configuration -->
-    <script src="/assets/js/config.js?v=2025081313"></script>
+    <script src="/assets/js/config.js?v=2025081314"></script>
 
     <!-- Cloudflare Web Analytics -->
     <script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "CF_BEACON_TOKEN"}'></script>
     
     <!-- Feedback Form Script -->
     <script>
-      // Set Web3Forms access key from config
+      // Set Web3Forms access key - direct injection during build
       document.addEventListener('DOMContentLoaded', function() {
-        if (window.APP_CONFIG && window.APP_CONFIG.WEB3FORMS_ACCESS_KEY) {
-          const keyInput = document.getElementById('web3forms-key');
-          if (keyInput) {
-            keyInput.value = window.APP_CONFIG.WEB3FORMS_ACCESS_KEY;
-          }
+        const keyInput = document.getElementById('web3forms-key');
+        if (keyInput) {
+          keyInput.value = 'WEB3FORMS_ACCESS_KEY_PLACEHOLDER';
         }
       });
 
