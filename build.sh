@@ -5,15 +5,24 @@
 
 echo "🚀 Building PillSnap web..."
 
-# Load environment variables
+# Debug: Print environment info
+echo "Environment variables status:"
+echo "GA_MEASUREMENT_ID: ${GA_MEASUREMENT_ID:-'not set'}"
+echo "CF_BEACON_TOKEN: ${CF_BEACON_TOKEN:-'not set'}"
+echo "WEB3FORMS_ACCESS_KEY: ${WEB3FORMS_ACCESS_KEY:-'not set'}"
+
+# Load environment variables from .env if running locally
 if [ -f .env ]; then
+    echo "Loading from .env file..."
     export $(cat .env | grep -v '^#' | xargs)
 else
-    echo "⚠️  Warning: .env file not found. Using placeholder values."
-    GA_MEASUREMENT_ID="GA_MEASUREMENT_ID"
-    CF_BEACON_TOKEN="CF_BEACON_TOKEN"
-    WEB3FORMS_ACCESS_KEY="WEB3FORMS_ACCESS_KEY"
+    echo "⚠️  Warning: .env file not found. Using environment variables from Cloudflare Pages."
 fi
+
+# Set defaults if still not set
+GA_MEASUREMENT_ID="${GA_MEASUREMENT_ID:-GA_MEASUREMENT_ID}"
+CF_BEACON_TOKEN="${CF_BEACON_TOKEN:-CF_BEACON_TOKEN}"
+WEB3FORMS_ACCESS_KEY="${WEB3FORMS_ACCESS_KEY:-WEB3FORMS_ACCESS_KEY}"
 
 # Create config.js with environment variables
 cat > assets/js/config.js << EOF
